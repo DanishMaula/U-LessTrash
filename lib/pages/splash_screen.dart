@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
+import 'package:u_less_trash/pages/login_page.dart';
 
 import 'home_page.dart';
 
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 2),
         (() => Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
-              return const HomePage();
+              return const LoginPage();
             }))));
   }
 
