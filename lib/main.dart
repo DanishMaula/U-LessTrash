@@ -3,6 +3,7 @@ import 'package:u_less_trash/pages/home_page.dart';
 import 'package:u_less_trash/pages/login_page.dart';
 import 'package:u_less_trash/pages/register_page.dart';
 import 'package:u_less_trash/pages/splash_screen.dart';
+import 'package:u_less_trash/widget/nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/login':(context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
         '/home': (context) => const HomePage(),
+        '/navBar':(context) => const NavBar()
       },
     );
   }

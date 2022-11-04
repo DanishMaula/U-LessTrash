@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                     minWidth: 168,
                     height: 35,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, '/navBar');
                     
                     },
                     child: Text(
