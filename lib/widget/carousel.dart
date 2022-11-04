@@ -32,9 +32,9 @@ class _CarouselWidgetState extends State<CarouselWidget> {
               return buildImage(imageA, index);
             },
             options: CarouselOptions(
-                height: 200,
+                height: 250,
                 autoPlay: true,
-                viewportFraction: 1.0,
+                viewportFraction: 1,
                 onPageChanged: ((index, reason) =>
                     setState((() => pageIndex = index))))),
         const SizedBox(height: 5),

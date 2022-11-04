@@ -52,3 +52,16 @@ TextStyle loginFacebook = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: const Color(0xffFFFFFF),
 );
+
+TextStyle categories = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff000000),
+);
+
+TextStyle newsTitle = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff000000),
+);
+
