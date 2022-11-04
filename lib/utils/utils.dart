@@ -41,3 +41,14 @@ TextStyle textRegister = GoogleFonts.poppins(
   color: const Color(0xff2D8D7B),
 );
 
+TextStyle loginGoogle = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff263238),
+);
+
+TextStyle loginFacebook = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffFFFFFF),
+);

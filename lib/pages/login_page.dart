@@ -100,7 +100,10 @@ class _LoginPageState extends State<LoginPage> {
                     style: dontHA,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/register');
+                    
+                    },
                     child: Text('Register', style: textRegister),
                   ),
                 ],
@@ -133,9 +136,20 @@ class _LoginPageState extends State<LoginPage> {
                   minWidth: MediaQuery.of(context).size.width,
                   height: 40,
                   onPressed: () {},
-                  child: Text(
-                    'Login with Google',
-                    
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/logo_google.png',
+                        width: 20,
+                        height: 20,
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        'Login with Google',
+                        style: loginGoogle,
+                      ),
+                    ],
                   )),
               const SizedBox(height: 15),
               MaterialButton(
@@ -146,9 +160,21 @@ class _LoginPageState extends State<LoginPage> {
                   minWidth: MediaQuery.of(context).size.width,
                   height: 40,
                   onPressed: () {},
-                  child: Text(
-                    'Login with Facrbook',
-                    
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/logo_facebook.png',
+                        width: 20,
+                        height: 20,
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        'Login with Facebook',
+                        style: loginFacebook,
+                        
+                      ),
+                    ],
                   )),
             ],
           ),

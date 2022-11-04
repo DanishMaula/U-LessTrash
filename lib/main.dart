@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:u_less_trash/pages/home_page.dart';
+import 'package:u_less_trash/pages/login_page.dart';
+import 'package:u_less_trash/pages/register_page.dart';
 import 'package:u_less_trash/pages/splash_screen.dart';
 
 void main() {
@@ -11,8 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return  MaterialApp(
+      initialRoute: '/login',
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/login':(context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+      },
     );
   }
 }
