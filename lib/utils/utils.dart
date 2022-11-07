@@ -65,3 +65,8 @@ TextStyle newsTitle = GoogleFonts.poppins(
   color: const Color(0xff000000),
 );
 
+TextStyle titleAppbar = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff2D8D7B),
+);

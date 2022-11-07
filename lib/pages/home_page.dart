@@ -38,7 +38,9 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, '/wasteCategory');
+                        },
                         child: Container(
                           height: 80,
                           width: double.infinity / 2,
