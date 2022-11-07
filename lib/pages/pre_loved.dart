@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:u_less_trash/items/waste_categories_item.dart';
-import 'package:u_less_trash/models/waste_categories_model.dart';
+import 'package:flutter/widgets.dart';
+import 'package:u_less_trash/items/pre_loved_item.dart';
+import 'package:u_less_trash/models/pre_loved_model.dart';
 import 'package:u_less_trash/utils/utils.dart';
 
-class WasteCategories extends StatefulWidget {
-  const WasteCategories({super.key});
+class PreLoved extends StatefulWidget {
+  const PreLoved({super.key});
 
   @override
-  State<WasteCategories> createState() => _WasteCategoriesState();
+  State<PreLoved> createState() => _PreLovedState();
 }
 
-class _WasteCategoriesState extends State<WasteCategories> {
+class _PreLovedState extends State<PreLoved> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // circle back button
         leading: IconButton(
           icon: Image.asset('assets/images/ic_back.png'),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-
         title: Text(
-          'Waste Categories',
+          'Preloved Categories',
           style: titleAppbar,
         ),
       ),
@@ -37,13 +36,17 @@ class _WasteCategoriesState extends State<WasteCategories> {
             children: [
               ListView.builder(
                 itemBuilder: ((context, index) {
-                  final WasteCategoriesModel wasteCategoriesModel =
-                      wasteCategoriesList[index];
-                  return WasteCategoriesItem(
-                    wasteCategoriesModel: wasteCategoriesModel,
+                  final PrelovedModel prelovedModel = preLovedList[index];
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/fleaCategory');
+                    },
+                    child: PrelovedItem(
+                      prelovedModel: prelovedModel,
+                    ),
                   );
                 }),
-                itemCount: wasteCategoriesList.length,
+                itemCount: preLovedList.length,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
               ),

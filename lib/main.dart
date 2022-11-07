@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:u_less_trash/pages/flea_category.dart';
 import 'package:u_less_trash/pages/home_page.dart';
 import 'package:u_less_trash/pages/login_page.dart';
+import 'package:u_less_trash/pages/pre_loved.dart';
 import 'package:u_less_trash/pages/register_page.dart';
 import 'package:u_less_trash/pages/splash_screen.dart';
 import 'package:u_less_trash/pages/waste_categories.dart';
@@ -15,24 +17,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          color: Colors.white
-        )
-      ),
+    return MaterialApp(
+      theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.white)),
       initialRoute: '/splashScreen',
       debugShowCheckedModeBanner: false,
       routes: {
-        '/splashScreen':(context) => const SplashScreen(),
-        '/login':(context) => const LoginPage(),
+        '/splashScreen': (context) => const SplashScreen(),
+        '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
         '/home': (context) => const HomePage(),
-        '/navBar':(context) => const NavBar(),
+        '/navBar': (context) => const NavBar(),
         '/wasteCategory': (context) => const WasteCategories(),
+        '/preLoved': (context) => const PreLoved(),
+        '/fleaCategory': (context) => const FleaCategory(),
       },
     );
   }
 }
-
-

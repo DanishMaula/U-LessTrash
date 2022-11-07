@@ -70,3 +70,15 @@ TextStyle titleAppbar = GoogleFonts.poppins(
   fontWeight: FontWeight.bold,
   color: const Color(0xff2D8D7B),
 );
+
+TextStyle searchHint = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff828282),
+);
+
+TextStyle filterTab = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff828282),
+);
