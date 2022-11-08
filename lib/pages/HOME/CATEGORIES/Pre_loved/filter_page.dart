@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/location.dart';
 import 'package:u_less_trash/utils/text_style.dart';
 
 class FilterPage extends StatefulWidget {
@@ -26,7 +27,12 @@ class _FilterPageState extends State<FilterPage> {
         backgroundColor: Colors.white,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                isClicked = false;
+                isClicked2 = false;
+              });
+            },
             child: Text(
               'Reset',
               style: titleReset,
@@ -56,7 +62,7 @@ class _FilterPageState extends State<FilterPage> {
                 children: [
                   Container(
                     margin: const EdgeInsets.only(right: 10),
-                    height: 30,
+                    height: 31,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: const Color(0xffE5E5E5)),
@@ -73,7 +79,7 @@ class _FilterPageState extends State<FilterPage> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(right: 10),
-                    height: 30,
+                    height: 31,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: const Color(0xffE5E5E5)),
@@ -95,7 +101,7 @@ class _FilterPageState extends State<FilterPage> {
                       });
                     },
                     child: Container(
-                      height: 30,
+                      height: 31,
                       decoration: BoxDecoration(
                         color:
                             isClicked ? const Color(0xff2D8D7B) : Colors.white,
@@ -119,7 +125,7 @@ class _FilterPageState extends State<FilterPage> {
                 children: [
                   Container(
                     margin: const EdgeInsets.only(right: 10),
-                    height: 30,
+                    height: 31,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: const Color(0xffE5E5E5)),
@@ -136,7 +142,7 @@ class _FilterPageState extends State<FilterPage> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(right: 10),
-                    height: 30,
+                    height: 31,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: const Color(0xffE5E5E5)),
@@ -227,7 +233,7 @@ class _FilterPageState extends State<FilterPage> {
                         },
                         child: Container(
                           margin: const EdgeInsets.only(right: 10),
-                          height: 30,
+                          height: 31,
                           decoration: BoxDecoration(
                             color: isClicked2
                                 ? const Color(0xff2D8D7B)
@@ -247,7 +253,7 @@ class _FilterPageState extends State<FilterPage> {
                       ),
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -269,7 +275,7 @@ class _FilterPageState extends State<FilterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -286,7 +292,7 @@ class _FilterPageState extends State<FilterPage> {
                       ),
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -303,7 +309,7 @@ class _FilterPageState extends State<FilterPage> {
                       ),
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -320,7 +326,7 @@ class _FilterPageState extends State<FilterPage> {
                       ),
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -342,7 +348,7 @@ class _FilterPageState extends State<FilterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(right: 10),
-                        height: 30,
+                        height: 31,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: const Color(0xffE5E5E5)),
@@ -367,7 +373,12 @@ class _FilterPageState extends State<FilterPage> {
                   const SizedBox(height: 10),
                   InkWell(
                     onTap: () {
-                      
+                      if (isClicked && isClicked2 == true) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return  MapSample();
+                        }));
+                      }
                     },
                     child: Container(
                       height: 50,
@@ -385,7 +396,11 @@ class _FilterPageState extends State<FilterPage> {
                                 'Select Location',
                                 style: hintStyle,
                               ),
-                              Image.asset('assets/images/ic_location.png', width: 16, height: 20,)
+                              Image.asset(
+                                'assets/images/ic_location.png',
+                                width: 16,
+                                height: 20,
+                              )
                             ],
                           ),
                         ),
