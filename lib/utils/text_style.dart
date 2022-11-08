@@ -82,3 +82,63 @@ TextStyle filterTab = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: const Color(0xff828282),
 );
+
+TextStyle filterTabWhite = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffffffff),
+);
+
+TextStyle titleGrid = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle titleGridWaktu = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffffffff),
+);
+
+TextStyle titleGridHarga = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle titleGridPengguna = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle titleGridAlamat = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffC4C4C4),
+);
+
+TextStyle titleReset = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffEB5757),
+);
+
+TextStyle titleSPS = GoogleFonts.poppins(
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff333333),
+);
+
+TextStyle minMaxPrice = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle hintStyle = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff828282),
+);

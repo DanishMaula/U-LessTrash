@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 import 'package:u_less_trash/items/pre_loved_item.dart';
 import 'package:u_less_trash/models/pre_loved_model.dart';
-import 'package:u_less_trash/utils/utils.dart';
+import 'package:u_less_trash/utils/text_style.dart';
 
 class PreLoved extends StatefulWidget {
   const PreLoved({super.key});
@@ -19,7 +19,7 @@ class _PreLovedState extends State<PreLoved> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Image.asset('assets/images/ic_back.png'),
+          icon: Image.asset('assets/images/ic_back.png', width: 27, height: 27,),
           onPressed: () {
             Navigator.pop(context);
           },

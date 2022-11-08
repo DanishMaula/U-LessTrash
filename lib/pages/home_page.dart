@@ -6,7 +6,7 @@ import 'package:u_less_trash/items/news_item.dart';
 import 'package:u_less_trash/widget/carousel.dart';
 
 import '../models/news.dart';
-import '../utils/utils.dart';
+import '../utils/text_style.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

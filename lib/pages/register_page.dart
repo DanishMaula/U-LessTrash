@@ -2,21 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../utils/utils.dart';
+import '../utils/text_style.dart';
 
-class RegisterPage extends StatefulWidget {
+class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
 
-  @override
-  State<RegisterPage> createState() => _RegisterPageState();
-}
-
-class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only( top: 50),
+        padding: const EdgeInsets.only(top: 50),
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -75,7 +70,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 const SizedBox(height: 15),
-               TextField(
+                TextField(
                   decoration: InputDecoration(
                     hintText: 'Phone Number',
                     hintStyle: textFieldLogReg,
@@ -133,11 +128,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: const Color(0xff2D8D7B),
                   height: 35,
                   minWidth: 168,
-                  onPressed: (){
+                  onPressed: () {
                     Navigator.pushNamed(context, '/login');
                   },
-                child: Text('Register', style: buttonLogin,),),
-                const SizedBox(height: 15,),
+                  child: Text(
+                    'Register',
+                    style: buttonLogin,
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -148,15 +149,11 @@ class _RegisterPageState extends State<RegisterPage> {
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/login');
-                      
                       },
                       child: Text('Sign In', style: textRegister),
                     ),
                   ],
                 ),
-                
-              
-                
               ],
             ),
           ),

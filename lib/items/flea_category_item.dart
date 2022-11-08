@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/models/flea_category_model.dart';
+import 'package:u_less_trash/utils/text_style.dart';
 
 class FleaCategoryItem extends StatefulWidget {
   final FleaCategoryModel fleaCategoryModel;
@@ -17,12 +18,8 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
 
   @override
   Widget build(BuildContext context) {
-
-    
-
     return Container(
         width: 165,
-        height: 230,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(10),
@@ -81,7 +78,7 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                       child: Center(
                         child: Text(
                           widget.fleaCategoryModel.waktu,
-                          style: TextStyle(color: Colors.white, fontSize: 12),
+                          style: titleGridWaktu,
                         ),
                       ),
                     ),
@@ -99,32 +96,19 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                   children: [
                     Text(
                       widget.fleaCategoryModel.title,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: titleGrid
                     ),
                     Text(
                       widget.fleaCategoryModel.harga,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff2D8D7B),
-                      ),
+                      style: titleGridHarga
                     ),
                     Text(
                       widget.fleaCategoryModel.pengguna,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.black,
-                      ),
+                      style: titleGridPengguna
                     ),
                     Text(
                       widget.fleaCategoryModel.alamat,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.grey,
-                      ),
+                      style: titleGridAlamat
                     ),
                   ],
                 ),

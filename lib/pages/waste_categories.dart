@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/items/waste_categories_item.dart';
 import 'package:u_less_trash/models/waste_categories_model.dart';
-import 'package:u_less_trash/utils/utils.dart';
+import 'package:u_less_trash/utils/text_style.dart';
 
 class WasteCategories extends StatefulWidget {
   const WasteCategories({super.key});
@@ -19,7 +19,7 @@ class _WasteCategoriesState extends State<WasteCategories> {
       appBar: AppBar(
         // circle back button
         leading: IconButton(
-          icon: Image.asset('assets/images/ic_back.png'),
+          icon: Image.asset('assets/images/ic_back.png', width: 27, height: 27,),
           onPressed: () {
             Navigator.pop(context);
           },
