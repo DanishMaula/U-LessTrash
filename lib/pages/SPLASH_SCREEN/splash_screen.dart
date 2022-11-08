@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
-import 'package:u_less_trash/pages/login_page.dart';
+import 'package:u_less_trash/pages/AUTH/login_page.dart';
 
-import 'home_page.dart';
+import '../HOME/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

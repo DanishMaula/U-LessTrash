@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../utils/text_style.dart';
+import '../../utils/text_style.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});

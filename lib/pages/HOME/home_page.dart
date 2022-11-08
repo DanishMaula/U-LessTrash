@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:u_less_trash/items/news_item.dart';
 import 'package:u_less_trash/widget/carousel.dart';
 
-import '../models/news.dart';
-import '../utils/text_style.dart';
+import '../../models/news.dart';
+import '../../utils/text_style.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

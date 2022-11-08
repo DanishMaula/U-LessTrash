@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:u_less_trash/pages/add_trash.dart';
-import 'package:u_less_trash/pages/chat_page.dart';
-import 'package:u_less_trash/pages/home_page.dart';
-import 'package:u_less_trash/pages/my_stock.dart';
-import 'package:u_less_trash/pages/profile_page.dart';
+import 'package:u_less_trash/pages/CHAT/chat_page.dart';
+import 'package:u_less_trash/pages/HOME/home_page.dart';
+import 'package:u_less_trash/pages/MY_STOCK/my_stock.dart';
+import 'package:u_less_trash/pages/PROFILE/profile_page.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key, }) : super(key: key);

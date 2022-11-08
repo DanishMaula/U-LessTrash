@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/items/flea_category_item.dart';
 import 'package:u_less_trash/models/flea_category_model.dart';
-import 'package:u_less_trash/pages/filter_page.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/filter_page.dart';
 import 'package:u_less_trash/utils/text_style.dart';
 
 class FleaCategory extends StatefulWidget {
