@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -24,42 +25,44 @@ class _FilterPageState extends State<FilterPage> {
   var locationSelected =
       'Perumahan Nusa Loka Blok B2 No 2, \nJombang, Ciputat, Tangsel';
 
-
-   // Shared Pref
   // @override
   // void initState() {
   //   super.initState();
   //   _loadData();
   // }
 
-  // _getData() async {
+  // setPreference() async {
   //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   setState(() {
-  //     prefs.setInt('switchColor', bgColourTab);
-  //   });
+
+  //   prefs.setInt('color', bgColourTab);
+
+  //   setState(() {});
+  // }
+
+  // _getData() async {
+  //   setPreference();
+
   // }
 
   // _loadData() async {
-  //   SharedPreferences pref = await SharedPreferences.getInstance();
-  //   setState(() {
-  //     bgColourTab = pref.getInt('switchColor') ?? 0xff2D8D7B;
-  //   });
+  //   setPreference();
+
   // }
 
-  getDatas() async {
-    var duration = Duration(seconds: 1);
-    return Timer(duration, () {
-      if (widget.text == 'miqdad') {
-        setState(() {
-          locationUnSelected = locationSelected;
-        });
-      } else {
-        setState(() {
-          locationUnSelected = 'Select Location';
-        });
-      }
-    });
-  }
+  // getDatas() async {
+  //   var duration = Duration(seconds: 1);
+  //   return Timer(duration, () {
+  //     if (widget.text == 'miqdad') {
+  //       setState(() {
+  //         locationUnSelected = locationSelected;
+  //       });
+  //     } else {
+  //       setState(() {
+  //         locationUnSelected = 'Select Location';
+  //       });
+  //     }
+  //   });
+  // }
 
   var isClicked = false;
   var isClicked2 = false;
@@ -72,9 +75,12 @@ class _FilterPageState extends State<FilterPage> {
         color: const Color(0xff2D8D7B),
         child: MaterialButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const MenCategory();
-            }));
+            if (isClicked == true && isClicked2 == true) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MenCategory()),
+              );
+            }
           },
           child: Text(
             'SAVE',
@@ -164,7 +170,6 @@ class _FilterPageState extends State<FilterPage> {
                     onTap: () {
                       setState(() {
                         isClicked = !isClicked;
-                    
                       });
                     },
                     child: Container(
@@ -443,7 +448,7 @@ class _FilterPageState extends State<FilterPage> {
                       if (isClicked && isClicked2 == true) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return MapSample();
+                          return const MapSample();
                         }));
                       }
                     },
