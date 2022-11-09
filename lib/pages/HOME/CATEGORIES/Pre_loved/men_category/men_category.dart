@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:u_less_trash/items/flea_category_item.dart';
-import 'package:u_less_trash/models/flea_category_model.dart';
-import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/filter_page.dart';
-import 'package:u_less_trash/utils/text_style.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:u_less_trash/items/men_category_item.dart';
+import 'package:u_less_trash/models/men_category_model.dart';
 
-class FleaCategory extends StatefulWidget {
-  const FleaCategory({super.key});
+import '../../../../../items/flea_category_item.dart';
+import '../../../../../models/flea_category_model.dart';
+import '../../../../../utils/text_style.dart';
+import '../filter/filter_page.dart';
+
+class MenCategory extends StatefulWidget {
+  const MenCategory({super.key});
 
   @override
-  State<FleaCategory> createState() => _FleaCategoryState();
+  State<MenCategory> createState() => _MenCategoryState();
 }
 
-class _FleaCategoryState extends State<FleaCategory> {
-  var isActive = false;
+class _MenCategoryState extends State<MenCategory> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+     var size = MediaQuery.of(context).size;
 
     /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
+    final double itemHeight = (size.height - kToolbarHeight - 100) / 2;
     final double itemWidth = size.width / 2;
-
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -57,8 +59,10 @@ class _FleaCategoryState extends State<FleaCategory> {
                       border: Border.all(color: const Color(0xffE0E0E0)),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: SizedBox(
+                      height: 30,
                       child: TextField(
+                        textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                           hintText: 'Search here...',
                           hintStyle: searchHint,
@@ -105,7 +109,9 @@ class _FleaCategoryState extends State<FleaCategory> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FilterPage()));
+                              builder: (context) => const FilterPage(
+                                    text: '',
+                                  )));
                     },
                     child: Container(
                       height: 35,
@@ -123,9 +129,10 @@ class _FleaCategoryState extends State<FleaCategory> {
                               const SizedBox(
                                 width: 5,
                               ),
-                              const Icon(
-                                Icons.filter_list,
-                                color: Color(0xff828282),
+                              Image.asset(
+                                'assets/images/ic_filter.png',
+                                width: 18,
+                                height: 15,
                               ),
                             ],
                           ),
@@ -153,7 +160,7 @@ class _FleaCategoryState extends State<FleaCategory> {
                             ),
                             child: Center(
                                 child: Text(
-                              'All Products',
+                              'Men\s Fashion',
                               style: filterTab,
                             )),
                           ),
@@ -200,10 +207,10 @@ class _FleaCategoryState extends State<FleaCategory> {
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 20),
                 itemBuilder: ((context, index) {
-                  final FleaCategoryModel fleaCategoryModel =
-                      fleaCategoryList[index];
-                  return FleaCategoryItem(
-                    fleaCategoryModel: fleaCategoryModel,
+                  final MenCategoryModel menCategoryModel =
+                      menCategoryList[index];
+                  return MenCategoryItem(
+                    menCategoryModel: menCategoryModel,
                   );
                 }),
                 itemCount: fleaCategoryList.length,

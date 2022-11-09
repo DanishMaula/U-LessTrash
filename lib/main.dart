@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/flea_category.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/flea_category/flea_category.dart';
 import 'package:u_less_trash/pages/HOME/home_page.dart';
 import 'package:u_less_trash/pages/AUTH/login_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/pre_loved.dart';

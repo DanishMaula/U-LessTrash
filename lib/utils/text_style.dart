@@ -29,10 +29,7 @@ TextStyle buttonLogin = GoogleFonts.poppins(
 );
 
 TextStyle dontHA = GoogleFonts.poppins(
-  fontSize: 12,
-  fontWeight: FontWeight.w500,
-  color: const Color(0xff263238)
-);
+    fontSize: 12, fontWeight: FontWeight.w500, color: const Color(0xff263238));
 
 TextStyle textRegister = GoogleFonts.poppins(
   fontSize: 12,
@@ -141,4 +138,39 @@ TextStyle hintStyle = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   color: const Color(0xff828282),
+);
+
+TextStyle selectAdd = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle textSpan1 = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff263238),
+);
+TextStyle textSpan2 = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle setLocation = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xffffffff),
+);
+
+TextStyle currentLocationClicked = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff000000),
+);
+
+TextStyle bottomNavSave = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w700,
+  color: const Color(0xffffffff),
 );

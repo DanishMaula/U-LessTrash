@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/models/flea_category_model.dart';
+import 'package:u_less_trash/models/men_category_model.dart';
 import 'package:u_less_trash/utils/text_style.dart';
 
-class FleaCategoryItem extends StatefulWidget {
-  final FleaCategoryModel fleaCategoryModel;
+class MenCategoryItem extends StatefulWidget {
+  final MenCategoryModel menCategoryModel;
 
-  const FleaCategoryItem({super.key, required this.fleaCategoryModel});
+  const MenCategoryItem({super.key, required this.menCategoryModel});
 
   @override
-  State<FleaCategoryItem> createState() => _FleaCategoryItemState();
+  State<MenCategoryItem> createState() => _MenCategoryItemState();
 }
 
-class _FleaCategoryItemState extends State<FleaCategoryItem> {
+class _MenCategoryItemState extends State<MenCategoryItem> {
   var isActive = false;
 
   @override
@@ -38,7 +39,7 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                       color: Colors.grey,
                       image: DecorationImage(
                         image: NetworkImage(
-                          widget.fleaCategoryModel.image,
+                          widget.menCategoryModel.image,
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -79,7 +80,7 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                       ),
                       child: Center(
                         child: Text(
-                          widget.fleaCategoryModel.waktu,
+                          widget.menCategoryModel.waktu,
                           style: titleGridWaktu,
                         ),
                       ),
@@ -96,11 +97,11 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    Text(widget.fleaCategoryModel.title, style: titleGrid),
-                    Text(widget.fleaCategoryModel.harga, style: titleGridHarga),
-                    Text(widget.fleaCategoryModel.pengguna,
+                    Text(widget.menCategoryModel.title, style: titleGrid),
+                    Text(widget.menCategoryModel.harga, style: titleGridHarga),
+                    Text(widget.menCategoryModel.pengguna,
                         style: titleGridPengguna),
-                    Text(widget.fleaCategoryModel.alamat,
+                    Text(widget.menCategoryModel.alamat,
                         style: titleGridAlamat),
                   ],
                 ),

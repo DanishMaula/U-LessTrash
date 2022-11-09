@@ -1,23 +1,87 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/location.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/filter/location.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/men_category/men_category.dart';
 import 'package:u_less_trash/utils/text_style.dart';
 
 class FilterPage extends StatefulWidget {
-  const FilterPage({super.key});
+  final String text;
+
+  const FilterPage({super.key, required this.text});
 
   @override
   State<FilterPage> createState() => _FilterPageState();
 }
 
 class _FilterPageState extends State<FilterPage> {
+  int bgColourTab = 0xff2D8D7B;
+
+  var locationUnSelected = 'Select Location';
+  var locationSelected =
+      'Perumahan Nusa Loka Blok B2 No 2, \nJombang, Ciputat, Tangsel';
+
+
+   // Shared Pref
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _loadData();
+  // }
+
+  // _getData() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   setState(() {
+  //     prefs.setInt('switchColor', bgColourTab);
+  //   });
+  // }
+
+  // _loadData() async {
+  //   SharedPreferences pref = await SharedPreferences.getInstance();
+  //   setState(() {
+  //     bgColourTab = pref.getInt('switchColor') ?? 0xff2D8D7B;
+  //   });
+  // }
+
+  getDatas() async {
+    var duration = Duration(seconds: 1);
+    return Timer(duration, () {
+      if (widget.text == 'miqdad') {
+        setState(() {
+          locationUnSelected = locationSelected;
+        });
+      } else {
+        setState(() {
+          locationUnSelected = 'Select Location';
+        });
+      }
+    });
+  }
+
   var isClicked = false;
   var isClicked2 = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        height: 50,
+        color: const Color(0xff2D8D7B),
+        child: MaterialButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const MenCategory();
+            }));
+          },
+          child: Text(
+            'SAVE',
+            style: bottomNavSave,
+          ),
+        ),
+      ),
       appBar: AppBar(
         title: Text(
           'Filter',
@@ -94,10 +158,13 @@ class _FilterPageState extends State<FilterPage> {
                       ),
                     )),
                   ),
+
+                  // latest
                   InkWell(
                     onTap: () {
                       setState(() {
                         isClicked = !isClicked;
+                    
                       });
                     },
                     child: Container(
@@ -376,10 +443,11 @@ class _FilterPageState extends State<FilterPage> {
                       if (isClicked && isClicked2 == true) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return  MapSample();
+                          return MapSample();
                         }));
                       }
                     },
+                    // select location
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
@@ -393,7 +461,7 @@ class _FilterPageState extends State<FilterPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Select Location',
+                                locationUnSelected,
                                 style: hintStyle,
                               ),
                               Image.asset(
