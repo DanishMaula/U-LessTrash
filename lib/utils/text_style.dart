@@ -174,3 +174,46 @@ TextStyle bottomNavSave = GoogleFonts.poppins(
   fontWeight: FontWeight.w700,
   color: const Color(0xffffffff),
 );
+
+TextStyle titleDetail = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle hargaDetail = GoogleFonts.poppins(
+  fontSize: 24,
+  fontWeight: FontWeight.w700,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle penggunaDetail = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w700,
+  color: const Color(0xff333333),
+);
+
+TextStyle titleDesc = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w700,
+  color: const Color(0xff333333),
+);
+
+TextStyle descContent = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle chatSeller = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff000000),
+);
+
+TextStyle btnBuyNow = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xffffffff),
+);
+

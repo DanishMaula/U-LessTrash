@@ -52,10 +52,9 @@ class MapSampleState extends State<MapSample> {
       // Bottom Navigation Bar
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-        
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(35),
+            topRight: Radius.circular(35),
           ),
           color: Colors.white,
           boxShadow: [

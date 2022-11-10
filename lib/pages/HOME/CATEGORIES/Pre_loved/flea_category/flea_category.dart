@@ -196,14 +196,16 @@ class _FleaCategoryState extends State<FleaCategory> {
 
               // List flea category
               GridView.builder(
+                padding: const EdgeInsets.only(bottom: 50),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisExtent: 200,
                     crossAxisCount: 2,
-                    childAspectRatio: (itemWidth / itemHeight),
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 20),
+                    childAspectRatio: 0.75,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 40),
                 itemBuilder: ((context, index) {
                   final FleaCategoryModel fleaCategoryModel =
                       fleaCategoryList[index];

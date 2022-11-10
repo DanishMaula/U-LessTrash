@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:u_less_trash/items/men_category_item.dart';
 import 'package:u_less_trash/models/men_category_model.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/men_category/men_category_details.dart';
 
 import '../../../../../items/flea_category_item.dart';
 import '../../../../../models/flea_category_model.dart';
@@ -20,11 +21,6 @@ class MenCategory extends StatefulWidget {
 class _MenCategoryState extends State<MenCategory> {
   @override
   Widget build(BuildContext context) {
-     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 100) / 2;
-    final double itemWidth = size.width / 2;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -198,19 +194,31 @@ class _MenCategoryState extends State<MenCategory> {
 
               // List flea category
               GridView.builder(
+                padding: const EdgeInsets.only(bottom: 50),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisExtent: 200,
                     crossAxisCount: 2,
-                    childAspectRatio: (itemWidth / itemHeight),
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 20),
+                    childAspectRatio: 0.75,
+                    crossAxisSpacing: 24,
+                    mainAxisSpacing: 40),
                 itemBuilder: ((context, index) {
                   final MenCategoryModel menCategoryModel =
                       menCategoryList[index];
-                  return MenCategoryItem(
-                    menCategoryModel: menCategoryModel,
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MenCategoryDetails(
+                                    menCategoryModel: menCategoryModel,
+                                  )));
+                    },
+                    child: MenCategoryItem(
+                      menCategoryModel: menCategoryModel,
+                    ),
                   );
                 }),
                 itemCount: fleaCategoryList.length,

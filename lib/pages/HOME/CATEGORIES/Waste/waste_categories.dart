@@ -18,17 +18,19 @@ class _WasteCategoriesState extends State<WasteCategories> {
     return Scaffold(
       appBar: AppBar(
         // circle back button
-        leading: IconButton(
-          icon: Image.asset('assets/images/ic_back.png', width: 27, height: 27,),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        automaticallyImplyLeading: false,
 
-        title: Text(
-          'Waste Categories',
-          style: titleAppbar,
-        ),
+        title: Row(
+          children: [
+          IconButton(
+            icon: Image.asset('assets/images/ic_back.png'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+           Text('Waste Categories', style: titleAppbar,),
+        ],
+        )
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
