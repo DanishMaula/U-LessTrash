@@ -12,6 +12,22 @@ class MenCategoryDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Snack bar
+    final SnackBar snackBar = SnackBar(
+      content: Text('Added to cart'),
+      action: SnackBarAction(
+        label: 'Close',
+        onPressed: () {
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        },
+      ),
+      
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      ),
+    );
+
     return Scaffold(
       bottomNavigationBar: Container(
         height: 60,
@@ -25,58 +41,84 @@ class MenCategoryDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               // Text Seller
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: const Color(0xffE5E5E5)),
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/ic_chat_detail.png',
-                        width: 30,
-                        height: 30,
-                      ),
-                      const SizedBox(width: 5),
-                      Text('Chat Seller', style: chatSeller,)
-                    ],
+              Expanded(
+                flex: 3,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(color: const Color(0xffE5E5E5)),
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/ic_chat_detail.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          'Chat Seller',
+                          style: chatSeller,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
+              const SizedBox(width: 10),
 
               // add to cart
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: const Color(0xffE5E5E5)),
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/ic_cart_detail.png',
-                        width: 30,
-                        height: 30,
+              Expanded(
+                flex: 3,
+                child: GestureDetector(
+                  onTap: () {
+                    // show snackbar
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: const Color(0xffE5E5E5)),
+                      color: Colors.white,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/ic_cart_detail.png',
+                            width: 30,
+                            height: 30,
+                          ),
+                          const SizedBox(width: 5),
+                          Text(
+                            'Add To Cart',
+                            style: chatSeller,
+                          )
+                        ],
                       ),
-                      const SizedBox(width: 5),
-                      Text('Add To Cart', style: chatSeller,)
-                    ],
+                    ),
                   ),
                 ),
               ),
+              const SizedBox(width: 10),
 
               //buy now
-              MaterialButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)),
-                color: const Color(0xff2D8D7B),
-                onPressed: () {},
-                child: Text('Buy Now', style: btnBuyNow,),
+              Expanded(
+                flex: 2,
+                child: MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  color: const Color(0xff2D8D7B),
+                  onPressed: () {},
+                  child: Text(
+                    'Buy Now',
+                    style: btnBuyNow,
+                  ),
+                ),
               )
             ],
           ),

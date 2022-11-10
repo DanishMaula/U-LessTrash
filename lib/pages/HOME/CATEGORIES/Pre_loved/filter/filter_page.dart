@@ -31,13 +31,16 @@ class _FilterPageState extends State<FilterPage> {
   //   _loadData();
   // }
 
-  // setPreference() async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  setPreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
 
-  //   prefs.setInt('color', bgColourTab);
+    prefs.setInt('color', bgColourTab);
 
-  //   setState(() {});
-  // }
+    setState(() {
+      bgColourTab = prefs.getInt('color') ?? 0xff2D8D7B;
+    
+    });
+  }
 
   // _getData() async {
   //   setPreference();
@@ -49,20 +52,23 @@ class _FilterPageState extends State<FilterPage> {
 
   // }
 
-  // getDatas() async {
-  //   var duration = Duration(seconds: 1);
-  //   return Timer(duration, () {
-  //     if (widget.text == 'miqdad') {
-  //       setState(() {
-  //         locationUnSelected = locationSelected;
-  //       });
-  //     } else {
-  //       setState(() {
-  //         locationUnSelected = 'Select Location';
-  //       });
-  //     }
-  //   });
-  // }
+  void getData() async {
+      if (widget.text == 'miqdad') {
+        setState(() {
+          locationUnSelected = locationSelected;
+        });
+      } else {
+        setState(() {
+          locationUnSelected = 'Select Location';
+        });
+      }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
 
   var isClicked = false;
   var isClicked2 = false;
@@ -467,7 +473,9 @@ class _FilterPageState extends State<FilterPage> {
                             children: [
                               Text(
                                 locationUnSelected,
-                                style: hintStyle,
+                                style: locationSelected == 'Set Location'
+                                    ? hintStyle
+                                    : currentLocationClicked,
                               ),
                               Image.asset(
                                 'assets/images/ic_location.png',
