@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.pushNamed(context, '/wasteCategory');
                         },
                         child: Container(
-                          height: 80,
+                          height: 100,
                           width: double.infinity / 2,
                           decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.pushNamed(context, '/preLoved');
                         },
                         child: Container(
-                          height: 80,
+                          height: 100,
                           width: double.infinity / 2,
                           decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),

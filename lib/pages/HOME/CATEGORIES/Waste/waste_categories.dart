@@ -29,7 +29,7 @@ class _WasteCategoriesState extends State<WasteCategories> {
             },
           ),
            Text('Waste Categories', style: titleAppbar,),
-        ],
+        ], 
         )
       ),
       body: Padding(

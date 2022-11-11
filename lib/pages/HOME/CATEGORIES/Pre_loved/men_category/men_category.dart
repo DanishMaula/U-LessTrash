@@ -86,7 +86,10 @@ class _MenCategoryState extends State<MenCategory> {
                     width: 25,
                     height: 25,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/cart');
+                  
+                  },
                 ),
               ],
             ),

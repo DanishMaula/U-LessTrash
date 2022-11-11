@@ -16,13 +16,16 @@ class _NewsItemState extends State<NewsItem> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only( bottom: 10),
+      padding: const EdgeInsets.only(bottom: 10),
       child: SizedBox(
         height: 130,
         width: double.infinity,
         child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          child: Image.asset(widget.news.image, fit: BoxFit.cover,)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            child: Image.asset(
+              widget.news.image,
+              fit: BoxFit.cover,
+            )),
       ),
     );
   }

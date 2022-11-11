@@ -217,3 +217,62 @@ TextStyle btnBuyNow = GoogleFonts.poppins(
   color: const Color(0xffffffff),
 );
 
+TextStyle titleCart = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle alamatCart = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle titleCartItem = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle hargaCartItem = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle penggunaCartItem = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle btnCheckOutCart = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xffffffff),
+);
+
+TextStyle btnCheckOutCartEmpty = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff828282),
+);
+
+TextStyle titlePriceCart = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle priceCartEmpty = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff828282),
+);
+
+TextStyle priceCartFill = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff2D8D7B),
+);

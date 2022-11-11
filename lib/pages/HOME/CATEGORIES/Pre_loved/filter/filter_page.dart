@@ -473,7 +473,7 @@ class _FilterPageState extends State<FilterPage> {
                             children: [
                               Text(
                                 locationUnSelected,
-                                style: locationSelected == 'Set Location'
+                                style: locationUnSelected == 'Select Location'
                                     ? hintStyle
                                     : currentLocationClicked,
                               ),

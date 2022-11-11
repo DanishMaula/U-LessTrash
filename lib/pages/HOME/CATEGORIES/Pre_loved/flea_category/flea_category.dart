@@ -17,11 +17,6 @@ class _FleaCategoryState extends State<FleaCategory> {
   var isActive = false;
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 50) / 2;
-    final double itemWidth = size.width / 2;
 
     return Scaffold(
       appBar: AppBar(

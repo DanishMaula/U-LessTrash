@@ -14,6 +14,7 @@ class MenCategoryDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     // Snack bar
     final SnackBar snackBar = SnackBar(
+      backgroundColor: Colors.black.withOpacity(0.8),
       content: Text('Added to cart'),
       action: SnackBarAction(
         label: 'Close',
@@ -21,7 +22,6 @@ class MenCategoryDetails extends StatelessWidget {
           ScaffoldMessenger.of(context).hideCurrentSnackBar();
         },
       ),
-      
       behavior: SnackBarBehavior.floating,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
