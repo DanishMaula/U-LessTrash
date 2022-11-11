@@ -42,7 +42,7 @@ class _CartPageState extends State<CartPage> {
             ],
           )),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -152,7 +152,7 @@ class _CartPageState extends State<CartPage> {
                               child: CircleAvatar(
                                 minRadius: 30,
                                 backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1545231027-637d2f6210f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
+                                    'https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'),
                               ),
                             ),
                             Column(
@@ -164,7 +164,7 @@ class _CartPageState extends State<CartPage> {
                                   style: titleCart,
                                 ),
                                 Text(
-                                  'Cipondoh, Tangerang, Indonesia',
+                                  'Cipondoh, Tangerang Indonesia',
                                   style: alamatCart,
                                 ),
                               ],
@@ -173,7 +173,7 @@ class _CartPageState extends State<CartPage> {
                         ),
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
               _listView2(),

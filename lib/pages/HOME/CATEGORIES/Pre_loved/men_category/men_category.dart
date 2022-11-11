@@ -88,7 +88,6 @@ class _MenCategoryState extends State<MenCategory> {
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, '/cart');
-                  
                   },
                 ),
               ],
@@ -206,7 +205,7 @@ class _MenCategoryState extends State<MenCategory> {
                     crossAxisCount: 2,
                     childAspectRatio: 0.75,
                     crossAxisSpacing: 24,
-                    mainAxisSpacing: 40),
+                    mainAxisSpacing: 50),
                 itemBuilder: ((context, index) {
                   final MenCategoryModel menCategoryModel =
                       menCategoryList[index];

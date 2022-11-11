@@ -31,16 +31,16 @@ class _FilterPageState extends State<FilterPage> {
   //   _loadData();
   // }
 
-  setPreference() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
+  // setPreference() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    prefs.setInt('color', bgColourTab);
+  //   prefs.setInt('color', bgColourTab);
 
-    setState(() {
-      bgColourTab = prefs.getInt('color') ?? 0xff2D8D7B;
+  //   setState(() {
+  //     bgColourTab = prefs.getInt('color') ?? 0xff2D8D7B;
     
-    });
-  }
+  //   });
+  // }
 
   // _getData() async {
   //   setPreference();

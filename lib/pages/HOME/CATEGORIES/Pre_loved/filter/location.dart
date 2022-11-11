@@ -36,6 +36,7 @@ class MapSampleState extends State<MapSample> {
 
   @override
   Widget build(BuildContext context) {
+    // send data to filter
     void sendData(context) {
       String textToSend = 'miqdad';
 

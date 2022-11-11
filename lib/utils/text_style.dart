@@ -276,3 +276,16 @@ TextStyle priceCartFill = GoogleFonts.poppins(
   fontWeight: FontWeight.bold,
   color: const Color(0xff2D8D7B),
 );
+
+TextStyle sbTitleClose = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffffffff),
+);
+
+TextStyle sbBtnSee = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xff31C2A7),
+  decoration: TextDecoration.underline,
+);

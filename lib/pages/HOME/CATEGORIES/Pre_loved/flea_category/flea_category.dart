@@ -17,7 +17,6 @@ class _FleaCategoryState extends State<FleaCategory> {
   var isActive = false;
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -200,7 +199,7 @@ class _FleaCategoryState extends State<FleaCategory> {
                     crossAxisCount: 2,
                     childAspectRatio: 0.75,
                     crossAxisSpacing: 20,
-                    mainAxisSpacing: 40),
+                    mainAxisSpacing: 50),
                 itemBuilder: ((context, index) {
                   final FleaCategoryModel fleaCategoryModel =
                       fleaCategoryList[index];

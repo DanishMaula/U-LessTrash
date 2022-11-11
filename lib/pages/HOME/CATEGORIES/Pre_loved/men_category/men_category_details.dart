@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 import 'package:u_less_trash/models/men_category_model.dart';
+import 'package:u_less_trash/pages/CHAT/chat_page.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/cart_page.dart';
 import 'package:u_less_trash/utils/text_style.dart';
 
 class MenCategoryDetails extends StatelessWidget {
@@ -15,13 +17,45 @@ class MenCategoryDetails extends StatelessWidget {
     // Snack bar
     final SnackBar snackBar = SnackBar(
       backgroundColor: Colors.black.withOpacity(0.8),
-      content: Text('Added to cart'),
-      action: SnackBarAction(
-        label: 'Close',
-        onPressed: () {
-          ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        },
-      ),
+      content: Container(
+          height: 20,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Added to Cart',
+                style: sbTitleClose,
+              ),
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // remove snackbar
+                      ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                    },
+                    child: Text(
+                      'Close',
+                      style: sbTitleClose,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const CartPage();
+                      }));
+                    },
+                    child: Text(
+                      'See',
+                      style: sbBtnSee,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          )),
       behavior: SnackBarBehavior.floating,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
@@ -35,93 +69,86 @@ class MenCategoryDetails extends StatelessWidget {
           border: Border.all(color: const Color(0xffE5E5E5)),
           color: Colors.white,
         ),
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Text Seller
-              Expanded(
-                flex: 3,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: const Color(0xffE5E5E5)),
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/ic_chat_detail.png',
-                          width: 30,
-                          height: 30,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          'Chat Seller',
-                          style: chatSeller,
-                        )
-                      ],
-                    ),
-                  ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // Text Seller
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const ChatPage()));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: const Color(0xffE5E5E5)),
+                  color: Colors.white,
                 ),
-              ),
-              const SizedBox(width: 10),
-
-              // add to cart
-              Expanded(
-                flex: 3,
-                child: GestureDetector(
-                  onTap: () {
-                    // show snackbar
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: const Color(0xffE5E5E5)),
-                      color: Colors.white,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/images/ic_cart_detail.png',
-                            width: 30,
-                            height: 30,
-                          ),
-                          const SizedBox(width: 5),
-                          Text(
-                            'Add To Cart',
-                            style: chatSeller,
-                          )
-                        ],
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/ic_chat_detail.png',
+                        width: 20,
+                        height: 20,
                       ),
-                    ),
+                      const SizedBox(width: 5),
+                      Text(
+                        'Chat Seller',
+                        style: chatSeller,
+                      )
+                    ],
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
+            ),
 
-              //buy now
-              Expanded(
-                flex: 2,
-                child: MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  color: const Color(0xff2D8D7B),
-                  onPressed: () {},
-                  child: Text(
-                    'Buy Now',
-                    style: btnBuyNow,
+            // add to cart
+            GestureDetector(
+              onTap: () {
+                // show snackbar
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: const Color(0xffE5E5E5)),
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/ic_cart_detail.png',
+                        width: 20,
+                        height: 20,
+                      ),
+                      const SizedBox(width: 5),
+                      Text(
+                        'Add To Cart',
+                        style: chatSeller,
+                      )
+                    ],
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            ),
+
+            //buy now
+            MaterialButton(
+              height: 40,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: const Color(0xff2D8D7B),
+              onPressed: () {},
+              child: Text(
+                'Buy Now',
+                style: btnBuyNow,
+              ),
+            )
+          ],
         ),
       ),
       body: SingleChildScrollView(

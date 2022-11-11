@@ -68,7 +68,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '1 Jam Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/12/10/c8d25650-afe7-40e2-98f3-83a9aaef3f0d.jpg',
+          'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Sepatu Kulit Buaya',
       harga: 'Rp. 131.000',
       pengguna: 'Fariz Setiawan',
