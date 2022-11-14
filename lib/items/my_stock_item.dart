@@ -1,57 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:u_less_trash/models/flea_category_model.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:u_less_trash/models/my_stock_models.dart';
 
 import '../utils/text_style.dart';
 
-class CartItem extends StatefulWidget {
-  final FleaCategoryModel model;
-  late bool isChecked;
-  CartItem({super.key, required this.model, required this.isChecked});
+class MyStockItem extends StatelessWidget {
+  final MyStockModel myStockModel;
 
-  @override
-  State<CartItem> createState() => _CartItemState();
-}
+  const MyStockItem({super.key, required this.myStockModel});
 
-class _CartItemState extends State<CartItem> {
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Checkbox(
-          checkColor: Colors.white,
-          value: widget.isChecked,
-          fillColor: MaterialStateProperty.all(
-            const Color(0xff2D8D7B),
-          ),
-          shape: const CircleBorder(),
-          onChanged: (bool? value) {
-            setState(() {
-              widget.isChecked = value!;
-            });
-          },
-        ),
-
         //item cart
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(
               top: 10,
-              right: 15,
+              right: 20,
+              left: 20,
             ),
             child: Wrap(
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ]),
+                    color: Colors.white,
+                    border: Border.all(color: const Color(0xffE5E5E5)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -62,8 +40,8 @@ class _CartItemState extends State<CartItem> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
-                              image: NetworkImage(widget.model.image),
-                              fit: BoxFit.cover,
+                              image: NetworkImage(myStockModel.image),
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -78,16 +56,16 @@ class _CartItemState extends State<CartItem> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                              widget.model.title,
+                              myStockModel.title,
                               style: titleCartItem,
                             ),
                             Text(
-                              widget.model.harga,
+                              myStockModel.price,
                               style: hargaCartItem,
                             ),
                             Text(
-                              widget.model.pengguna,
-                              style: penggunaCartItem,
+                              myStockModel.date,
+                              style: txtDateStock,
                             ),
                           ],
                         ),

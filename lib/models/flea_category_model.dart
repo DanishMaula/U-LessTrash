@@ -20,7 +20,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '4 Menit Yang Lalu',
       image:
-          'https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+          'https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGF0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Topi Mockup',
       harga: 'Rp. 45.000',
       pengguna: 'Fariz Setiawan',
@@ -28,7 +28,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '5 Menit Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/7/14/e3ee8bf3-71c6-434c-bdfe-b6b69e87c37c.jpg',
+          'https://images.unsplash.com/photo-1585075411755-9338ea8b4c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGphY2tldHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'Jacket Abu Abu',
       harga: 'Rp. 175.000',
       pengguna: 'Fariz Setiawan',
@@ -36,7 +36,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '10 Menit Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/9/10/cc5817f1-8ca5-496b-b3a9-3e84d366722f.jpg',
+          'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8amVhbnN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Jeans',
       harga: 'Rp. 69.000',
       pengguna: 'Fariz Setiawan',
@@ -44,7 +44,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '27 Menit Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/1/6/23660e34-f0e8-4bd5-ba2e-ebc176d4fcc4.jpg',
+          'https://images.unsplash.com/photo-1553686660-458d75f64604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlZGRpbmclMjBzaG9lc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'Sepatu Nikah',
       harga: 'Rp. 73.000',
       pengguna: 'Fariz Setiawan',
@@ -52,7 +52,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '42 Menit Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/product-1/2020/3/18/69504746/69504746_dadddde2-df6d-4f1e-870d-6bf1334b2ff1_1280_1280',
+          'https://images.unsplash.com/photo-1558837911-672b6ddfdb1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmxhbmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Flanel Merah',
       harga: 'Rp. 89.000',
       pengguna: 'Fariz Setiawan',
@@ -60,7 +60,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '57 Menit Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2020/11/23/97385b9e-910a-4094-9001-f9efb9fb6703.jpg',
+          'https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmVja2xhY2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Necklace 20g',
       harga: 'Rp. 5000.000',
       pengguna: 'Fariz Setiawan',
@@ -76,7 +76,7 @@ var fleaCategoryList = [
   FleaCategoryModel(
       waktu: '2 Jam Yang Lalu',
       image:
-          'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/9/7/a504d8af-b7d4-441f-98d3-2eff767b9f66.jpg',
+          'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z2xhc3Nlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'kacamata Optically',
       harga: 'Rp. 215.000',
       pengguna: 'Fariz Setiawan',

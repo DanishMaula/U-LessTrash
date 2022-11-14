@@ -152,7 +152,7 @@ class _CartPageState extends State<CartPage> {
                               child: CircleAvatar(
                                 minRadius: 30,
                                 backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'),
+                                    'https://images.unsplash.com/photo-1572094382897-21abe88fb269?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGxvZ298ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),
                               ),
                             ),
                             Column(

@@ -71,18 +71,24 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                     ),
                     Positioned(
                       top: 120,
-                      child: Container(
-                        height: 30,
-                        width: 100,
-                        decoration: const BoxDecoration(
-                          color: Color(0xff2D8D7B),
-                        ),
-                        child: Center(
-                          child: Text(
-                            widget.fleaCategoryModel.waktu,
-                            style: titleGridWaktu,
+                      child: Wrap(
+                        children: [
+                          Container(
+                            height: 30,
+                            decoration: const BoxDecoration(
+                              color: Color(0xff2D8D7B),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text(
+                                  widget.fleaCategoryModel.waktu,
+                                  style: titleGridWaktu,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                   ],

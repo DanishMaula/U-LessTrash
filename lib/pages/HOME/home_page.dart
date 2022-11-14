@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                   }),
                   itemCount: allNewsList.length,
                   shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                 ),
               ],
             ),

@@ -289,3 +289,33 @@ TextStyle sbBtnSee = GoogleFonts.poppins(
   color: const Color(0xff31C2A7),
   decoration: TextDecoration.underline,
 );
+
+TextStyle txtDateStock = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xffC4C4C4),
+);
+
+TextStyle txtChat0 = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffffffff),
+);
+
+TextStyle txtChat1 = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff828282),
+);
+
+TextStyle txtBNBChat = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xff000000),
+);
+
+TextStyle tfChat = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xff828282),
+);

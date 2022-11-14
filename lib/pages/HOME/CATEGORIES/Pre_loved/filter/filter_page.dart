@@ -38,7 +38,7 @@ class _FilterPageState extends State<FilterPage> {
 
   //   setState(() {
   //     bgColourTab = prefs.getInt('color') ?? 0xff2D8D7B;
-    
+
   //   });
   // }
 
@@ -53,15 +53,15 @@ class _FilterPageState extends State<FilterPage> {
   // }
 
   void getData() async {
-      if (widget.text == 'miqdad') {
-        setState(() {
-          locationUnSelected = locationSelected;
-        });
-      } else {
-        setState(() {
-          locationUnSelected = 'Select Location';
-        });
-      }
+    if (widget.text == 'miqdad') {
+      setState(() {
+        locationUnSelected = locationSelected;
+      });
+    } else {
+      setState(() {
+        locationUnSelected = 'Select Location';
+      });
+    }
   }
 
   @override
@@ -201,39 +201,45 @@ class _FilterPageState extends State<FilterPage> {
               const SizedBox(height: 10),
               Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 10),
-                    height: 31,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: const Color(0xffE5E5E5)),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                        child: Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Text(
-                        'Price - High to Low',
-                        style: filterTab,
+                  Wrap(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: const Color(0xffE5E5E5)),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Center(
+                            child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            'Price - High to Low',
+                            style: filterTab,
+                          ),
+                        )),
                       ),
-                    )),
+                    ],
                   ),
-                  Container(
-                    margin: const EdgeInsets.only(right: 10),
-                    height: 31,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: const Color(0xffE5E5E5)),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                        child: Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Text(
-                        'Price - Low to High',
-                        style: filterTab,
+                  Wrap(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: const Color(0xffE5E5E5)),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Center(
+                            child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            'Price - Low to High',
+                            style: filterTab,
+                          ),
+                        )),
                       ),
-                    )),
+                    ],
                   ),
                 ],
               ),
@@ -248,20 +254,24 @@ class _FilterPageState extends State<FilterPage> {
                 style: minMaxPrice,
               ),
               const SizedBox(height: 5),
-              Container(
+              SizedBox(
                 height: 40,
-                decoration: BoxDecoration(
-                  border: Border.all(color: const Color(0xffE5E5E5)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Set Price',
-                        hintStyle: hintStyle,
+                child: TextField(
+                  textAlignVertical: TextAlignVertical.center,
+                  decoration: InputDecoration(
+                    hintText: 'Set Price',
+                    hintStyle: hintStyle,
+                    contentPadding: const EdgeInsets.all(8),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: Color(0xffE5E5E5),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: Color(0xffE5E5E5),
                       ),
                     ),
                   ),
@@ -273,20 +283,24 @@ class _FilterPageState extends State<FilterPage> {
                 style: minMaxPrice,
               ),
               const SizedBox(height: 5),
-              Container(
+              SizedBox(
                 height: 40,
-                decoration: BoxDecoration(
-                  border: Border.all(color: const Color(0xffE5E5E5)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Set Price',
-                        hintStyle: hintStyle,
+                child: TextField(
+                  textAlignVertical: TextAlignVertical.center,
+                  decoration: InputDecoration(
+                    hintText: 'Set Price',
+                    hintStyle: hintStyle,
+                    contentPadding: const EdgeInsets.all(8),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: Color(0xffE5E5E5),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: Color(0xffE5E5E5),
                       ),
                     ),
                   ),

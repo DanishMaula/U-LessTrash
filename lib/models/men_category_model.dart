@@ -19,7 +19,7 @@ class MenCategoryModel {
 var menCategoryList = [
   MenCategoryModel(
       waktu: '4 Menit Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/3/21/db08b5f4-3b87-447c-9510-e67a4d3c76d7.jpg',
+      image: 'https://images.unsplash.com/photo-1629354113452-871f6aa61d39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JlZW4lMjBqYWNrZXR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Hoodie Putih & Ijo',
       harga: 'Rp. 100.000',
       pengguna: 'Fariz Setiawan',
@@ -27,7 +27,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '5 Menit Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/5/10/d629eea3-b3a0-41f8-b70a-0d66ad90504c.jpg',
+      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VpdHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'Jas Hitam Minimalis',
       harga: 'Rp. 175.000',
       pengguna: 'Fariz Setiawan',
@@ -35,7 +35,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '10 Menit Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/4/3/618d6ff3-87da-4381-ae55-f6fd3026c33d.jpg',
+      image: 'https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjBob29kaWV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Hoodie Putih Biru',
       harga: 'Rp. 100.000',
       pengguna: 'Fariz Setiawan',
@@ -43,7 +43,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '27 Menit Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/product-1/2019/4/9/3068559/3068559_113b5acc-aa2f-4078-a4fd-7b72d2094e25_568_700.jpg',
+      image: 'https://images.unsplash.com/photo-1531984898451-89ca3f9bd046?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ZSUyMHNoaXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Kaos Biru Dongker',
       harga: 'Rp. 50.000',
       pengguna: 'Fariz Setiawan',
@@ -59,7 +59,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '57 Menit Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/product-1/2020/6/22/48759853/48759853_59894067-8a1e-498d-8033-fc9ae5c4e356_1500_1500',
+      image: 'https://images.unsplash.com/photo-1603252109612-24fa03d145c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2hpdGUlMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'kemeja Formal Putih',
       harga: 'Rp. 128.000',
       pengguna: 'Fariz Setiawan',
@@ -67,7 +67,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '1 Jam Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/3/11/6ff816ea-ffad-45b3-8827-ef8613ccc746.jpg',
+      image: 'https://images.unsplash.com/photo-1502489785438-c48165222a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGVuaW0lMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
       title: 'Kemeja Jeans Biru',
       harga: 'Rp. 131.000',
       pengguna: 'Fariz Setiawan',
@@ -75,7 +75,7 @@ var menCategoryList = [
       ),
   MenCategoryModel(
       waktu: '2 Jam Yang Lalu',
-      image: 'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2020/5/10/a216ce47-b9b3-445b-b3a3-a479b057c5f5.jpg',
+      image: 'https://images.unsplash.com/photo-1558980875-d8314c2fd931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9uZyUyMHNsZWV2ZSUyMHNoaXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       title: 'Kaos Lengan Panjang',
       harga: 'Rp. 79.000',
       pengguna: 'Fariz Setiawan',

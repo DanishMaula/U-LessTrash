@@ -44,24 +44,28 @@ class _FleaCategoryState extends State<FleaCategory> {
                 //search bar
                 Expanded(
                   flex: 5,
-                  child: Container(
+                  child: SizedBox(
                     height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: const Color(0xffE0E0E0)),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: SizedBox(
-                      height: 30,
-                      child: TextField(
-                        textAlignVertical: TextAlignVertical.center,
-                        decoration: InputDecoration(
-                          hintText: 'Search here...',
-                          hintStyle: searchHint,
-                          border: InputBorder.none,
-                          prefixIcon: const Icon(
-                            Icons.search,
-                            color: Colors.grey,
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.center,
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: hintStyle,
+                        prefixIcon: const Icon(
+                          Icons.search,
+                          color: Colors.grey,
+                        ),
+                        contentPadding: const EdgeInsets.all(8),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            color: Colors.grey[200]!,
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            color: Colors.grey[200]!,
                           ),
                         ),
                       ),

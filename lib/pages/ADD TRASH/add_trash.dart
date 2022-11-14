@@ -4,8 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import '../../utils/text_style.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class AddTrash extends StatelessWidget {
+  const AddTrash({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
-          'Profile',
+          'Add Trash',
           style: titleAppbar,
         ),
       ),
