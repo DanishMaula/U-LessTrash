@@ -17,21 +17,22 @@ class _WasteCategoriesState extends State<WasteCategories> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // circle back button
-        automaticallyImplyLeading: false,
-
-        title: Row(
-          children: [
-          IconButton(
-            icon: Image.asset('assets/images/ic_back.png'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-           Text('Waste Categories', style: titleAppbar,),
-        ], 
-        )
-      ),
+          automaticallyImplyLeading: false,
+          elevation: 1,
+          title: Row(
+            children: [
+              IconButton(
+                icon: Image.asset('assets/images/ic_back.png'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Text(
+                'Waste Categories',
+                style: titleAppbar,
+              ),
+            ],
+          )),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
         child: SingleChildScrollView(

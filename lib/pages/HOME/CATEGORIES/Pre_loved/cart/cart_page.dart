@@ -44,6 +44,7 @@ class _CartPageState extends State<CartPage> {
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               Row(

@@ -100,6 +100,7 @@ class _MenCategoryState extends State<MenCategory> {
         ),
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: Column(
@@ -202,7 +203,7 @@ class _MenCategoryState extends State<MenCategory> {
               GridView.builder(
                 padding: const EdgeInsets.only(bottom: 50),
                 shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     mainAxisExtent: 200,

@@ -95,6 +95,7 @@ class _FilterPageState extends State<FilterPage> {
         ),
       ),
       appBar: AppBar(
+        elevation: 1,
         title: Text(
           'Filter',
           style: titleAppbar,
@@ -129,6 +130,7 @@ class _FilterPageState extends State<FilterPage> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

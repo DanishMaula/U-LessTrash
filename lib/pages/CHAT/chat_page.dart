@@ -6,9 +6,8 @@ import 'package:u_less_trash/models/men_category_model.dart';
 import '../../utils/text_style.dart';
 
 class ChatPage extends StatelessWidget {
-  final MenCategoryModel menCategoryModel;
 
-  const ChatPage({super.key, required this.menCategoryModel});
+  const ChatPage({super.key, });
 
   @override
   Widget build(BuildContext context) {
@@ -199,9 +198,9 @@ class ChatPage extends StatelessWidget {
                 width: 80,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
-                      menCategoryModel.image,
+                      'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2ZpbGV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
                     ),
                     fit: BoxFit.cover,
                   ),

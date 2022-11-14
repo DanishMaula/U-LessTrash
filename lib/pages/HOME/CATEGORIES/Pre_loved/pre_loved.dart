@@ -18,19 +18,22 @@ class _PreLovedState extends State<PreLoved> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-          IconButton(
-            icon: Image.asset('assets/images/ic_back.png'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-           Text('Preloved Categories', style: titleAppbar,),
-        ],
-        )
-      ),
+          elevation: 1,
+          automaticallyImplyLeading: false,
+          title: Row(
+            children: [
+              IconButton(
+                icon: Image.asset('assets/images/ic_back.png'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Text(
+                'Preloved Categories',
+                style: titleAppbar,
+              ),
+            ],
+          )),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
         child: SingleChildScrollView(

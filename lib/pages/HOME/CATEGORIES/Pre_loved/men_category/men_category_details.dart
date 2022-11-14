@@ -75,9 +75,11 @@ class MenCategoryDetails extends StatelessWidget {
             // Text Seller
             GestureDetector(
               onTap: () {
-                final MenCategoryModel menCategoryModel = menCategoryList[0..toString()];
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) =>  ChatPage(menCategoryModel: menCategoryModel,)));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ChatPage(
+                            )));
               },
               child: Container(
                 decoration: BoxDecoration(

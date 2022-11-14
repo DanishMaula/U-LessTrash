@@ -22,7 +22,7 @@ class _NavBarState extends State<NavBar> {
     HomePage(),
     MyStock(),
     AddTrash(),
-    chatPageList(),
+    ChatPageList(),
     ProfilePage()
   ];
 
