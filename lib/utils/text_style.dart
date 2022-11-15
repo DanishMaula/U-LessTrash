@@ -319,3 +319,65 @@ TextStyle tfChat = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   color: const Color(0xff828282),
 );
+
+TextStyle txtNamaSeller = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle txtChatTime = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff000000),
+);
+
+TextStyle txtCheckoutTitle = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff333333),
+);
+
+TextStyle txtCOD = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff333333),
+);
+
+TextStyle codCourier = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle txtTitlePayment = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff000000),
+);
+
+TextStyle txtPaymentSummary = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff333333),
+);
+
+TextStyle txtFinishPayment = GoogleFonts.poppins(
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff2D8D7B),
+  // inner shadow
+  // shadows: [
+  //   Shadow(
+  //     color: const Color(0x29000000),
+  //     offset: Offset(0, 3),
+  //     blurRadius: 6,
+  //   ),
+  // ],
+);
+
+TextStyle btnBackToHome = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xffffffff),
+);

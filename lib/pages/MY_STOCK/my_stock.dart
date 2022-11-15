@@ -13,6 +13,7 @@ class MyStock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 1,
         automaticallyImplyLeading: false,
         title: Text(
           'My Stock',
@@ -21,13 +22,16 @@ class MyStock extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ListView.builder(itemBuilder: ((context, index) {
-            final MyStockModel myStockModel = myStockList[index];
-            return MyStockItem(myStockModel: myStockModel,);
-          }),
-          itemCount: myStockList.length,
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          ListView.builder(
+            itemBuilder: ((context, index) {
+              final MyStockModel myStockModel = myStockList[index];
+              return MyStockItem(
+                myStockModel: myStockModel,
+              );
+            }),
+            itemCount: myStockList.length,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
           )
         ],
       ),

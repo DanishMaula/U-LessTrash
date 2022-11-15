@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/men_category/men_category.dart';
 
 import '../../../../../items/cart_item.dart';
 import '../../../../../models/flea_category_model.dart';
@@ -32,7 +33,9 @@ class _CartPageState extends State<CartPage> {
               IconButton(
                 icon: Image.asset('assets/images/ic_back.png'),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MenCategory();
+                  }));
                 },
               ),
               Text(
@@ -153,7 +156,7 @@ class _CartPageState extends State<CartPage> {
                               child: CircleAvatar(
                                 minRadius: 30,
                                 backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1572094382897-21abe88fb269?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGxvZ298ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),
+                                    'https://images.unsplash.com/photo-1568308073315-dff9ed586308?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aGF0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
                               ),
                             ),
                             Column(
@@ -217,7 +220,9 @@ class _CartPageState extends State<CartPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const CheckoutPage()),
+                                  builder: (context) => const CheckoutPage(
+                                        text: '',
+                                      )),
                             );
                           }
                         },

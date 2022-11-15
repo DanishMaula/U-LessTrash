@@ -470,7 +470,7 @@ class _FilterPageState extends State<FilterPage> {
                       if (isClicked && isClicked2 == true) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return const MapSample();
+                          return const MapSample(text: '',);
                         }));
                       }
                     },

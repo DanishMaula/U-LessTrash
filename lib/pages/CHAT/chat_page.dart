@@ -6,8 +6,9 @@ import 'package:u_less_trash/models/men_category_model.dart';
 import '../../utils/text_style.dart';
 
 class ChatPage extends StatelessWidget {
-
-  const ChatPage({super.key, });
+  const ChatPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -304,7 +305,10 @@ Widget _itemChat0({
         chat == 0 ? MainAxisAlignment.end : MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.end,
     children: [
-      Text(time),
+      Text(
+        time,
+        style: txtChatTime,
+      ),
       Container(
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(top: 10),
@@ -374,7 +378,10 @@ Widget _itemChat1({
       const SizedBox(
         width: 5,
       ),
-      Text(time)
+      Text(
+        time,
+        style: txtChatTime,
+      )
     ],
   );
 }

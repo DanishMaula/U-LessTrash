@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/models/seller_model.dart';
 
+import '../utils/text_style.dart';
+
 class ChatListItem extends StatelessWidget {
   final SellerModel sellerModel;
   const ChatListItem({super.key, required this.sellerModel});
@@ -14,7 +16,7 @@ class ChatListItem extends StatelessWidget {
       width: double.infinity,
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(color: Color(0xffE5E5E5)),
+          border: Border.all(color: const Color(0xffE5E5E5)),
         ),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -26,7 +28,10 @@ class ChatListItem extends StatelessWidget {
                 backgroundImage: NetworkImage(sellerModel.image),
               ),
               const SizedBox(width: 10),
-              Text(sellerModel.nama),
+              Text(
+                sellerModel.nama,
+                style: txtNamaSeller,
+              ),
             ],
           ),
         ),
