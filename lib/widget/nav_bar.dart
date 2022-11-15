@@ -35,7 +35,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     if (_selectedIndex == 2) {
-      return Scaffold( 
+      return Scaffold(
         body: _widgetOptions.elementAt(_selectedIndex),
       );
     }
@@ -72,8 +72,8 @@ class _NavBarState extends State<NavBar> {
               BottomNavigationBarItem(
                   icon: Image.asset(
                     'assets/images/ic_add_trash.png',
-                    width: 25,
-                    height: 25,
+                    width: 35,
+                    height: 35,
                   ),
                   label: ''),
               BottomNavigationBarItem(

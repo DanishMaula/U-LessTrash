@@ -17,6 +17,42 @@ class AddTrash extends StatelessWidget {
           style: titleAppbar,
         ),
       ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/wasteAddTrash.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Container(
+              width: double.infinity,
+              height: 125,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                image: const DecorationImage(
+                  image: AssetImage('assets/images/prelovedAddTrash.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
