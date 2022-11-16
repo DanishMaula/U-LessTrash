@@ -154,31 +154,36 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: const Color(0xff2F80ED),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text(
-                        'My History',
-                        style: txtMyHistory,
-                      ),
-                      const CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: Icon(
-                          Icons.history,
-                          color: Color(0xff000000),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/myHistory');
+                },
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff2F80ED),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Text(
+                          'My History',
+                          style: txtMyHistory,
                         ),
-                      )
-                    ],
+                        const CircleAvatar(
+                          backgroundColor: Colors.white,
+                          child: Icon(
+                            Icons.history,
+                            color: Color(0xff000000),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

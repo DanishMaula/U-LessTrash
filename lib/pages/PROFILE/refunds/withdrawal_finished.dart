@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:u_less_trash/utils/text_style.dart';
 
-class PaymentFinished extends StatelessWidget {
-  const PaymentFinished({super.key});
+import '../../../utils/text_style.dart';
 
+class WithdrawalFinished extends StatefulWidget {
+  const WithdrawalFinished({super.key});
+
+  @override
+  State<WithdrawalFinished> createState() => _WithdrawalFinishedState();
+}
+
+class _WithdrawalFinishedState extends State<WithdrawalFinished> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +28,9 @@ class PaymentFinished extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Your Purchase \nWas Successful',
+              'Money Withdrawal \nSuccessful',
               style: txtFinishPayment,
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             MaterialButton(

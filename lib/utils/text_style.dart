@@ -440,3 +440,21 @@ TextStyle txtLoremPin = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: const Color(0xff828282),
 );
+
+TextStyle txtLabelUnselect = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xffE5E5E5),
+);
+
+TextStyle txtLabelSelect = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff2D8D7B),
+);
+
+TextStyle txtSentHistory = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff2D8D7B),
+);

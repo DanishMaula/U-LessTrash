@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 import 'package:otp_text_field/otp_text_field.dart';
+import 'package:u_less_trash/pages/PROFILE/refunds/withdrawal_finished.dart';
 
 import '../../../utils/text_style.dart';
 
@@ -33,6 +34,7 @@ class EnterPin extends StatelessWidget {
           children: [
             Text(
               'ENTER YOUR PIN',
+              textAlign: TextAlign.center,
               style: txtEnterPin,
             ),
             const SizedBox(height: 50),
@@ -58,15 +60,15 @@ class EnterPin extends StatelessWidget {
           color: const Color(0xff2D8D7B),
           child: MaterialButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   PageRouteBuilder(
-              //     pageBuilder: (_, __, ___) => EnterPin(),
-              //     transitionDuration: const Duration(milliseconds: 500),
-              //     transitionsBuilder: (_, a, __, c) =>
-              //         FadeTransition(opacity: a, child: c),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (_, __, ___) => const WithdrawalFinished(),
+                  transitionDuration: const Duration(milliseconds: 500),
+                  transitionsBuilder: (_, a, __, c) =>
+                      FadeTransition(opacity: a, child: c),
+                ),
+              );
             },
             child: Text(
               'NEXT',
