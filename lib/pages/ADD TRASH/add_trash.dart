@@ -24,7 +24,10 @@ class AddTrash extends StatelessWidget {
           children: [
             Center(
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/cameraPage');
+                
+                },
                 child: Container(
                   width: double.infinity,
                   height: 125,

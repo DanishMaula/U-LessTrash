@@ -381,3 +381,28 @@ TextStyle btnBackToHome = GoogleFonts.poppins(
   fontWeight: FontWeight.w600,
   color: const Color(0xffffffff),
 );
+
+TextStyle txtNameProfile = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff000000),
+);
+
+TextStyle txtSaldoProfile = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xff000000),
+);
+
+TextStyle txtSubSaldoProfile = GoogleFonts.poppins(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffC4C4C4),
+);
+
+TextStyle txtMyHistory = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: const Color(0xffffffff),
+);
+

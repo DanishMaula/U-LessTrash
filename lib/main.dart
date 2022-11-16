@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/waste/camera_page.dart';
 import 'package:u_less_trash/pages/CHAT/chat_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/cart_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/payment_finished.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/chat': (context) => const ChatPage(),
         '/payment': (context) => const PaymentPage(),
         '/paymentFinish': (context) => const PaymentFinished(),
+        '/cameraPage': (context) => const CameraPage()
       },
     );
   }
