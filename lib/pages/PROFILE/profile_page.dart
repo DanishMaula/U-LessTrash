@@ -21,7 +21,7 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+        padding: const EdgeInsets.only(left: 20, top: 10, right: 20),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -112,33 +112,39 @@ class ProfilePage extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                Column(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: const Color(0xffE5E5E5)),
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Image.asset(
-                                          'assets/images/ic_cash.png',
-                                          height: 60,
-                                          fit: BoxFit.fill,
-                                          width: 60,
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                        context, '/selectRekening');
+                                  },
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: const Color(0xffE5E5E5)),
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Image.asset(
+                                            'assets/images/ic_cash.png',
+                                            height: 60,
+                                            fit: BoxFit.fill,
+                                            width: 60,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text(
-                                      'Rp. 125.000',
-                                      style: txtSaldoProfile,
-                                    ),
-                                    Text(
-                                      'Saldo',
-                                      style: txtSubSaldoProfile,
-                                    )
-                                  ],
+                                      Text(
+                                        'Rp. 125.000',
+                                        style: txtSaldoProfile,
+                                      ),
+                                      Text(
+                                        'Saldo',
+                                        style: txtSubSaldoProfile,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ],
                             )
