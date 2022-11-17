@@ -477,3 +477,16 @@ TextStyle txtTermCondition = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: const Color(0xff000000),
 );
+
+
+TextStyle btnCancelAddress = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xff263238),
+);
+
+TextStyle txtDialogWaste = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xffE5E5E5),
+);

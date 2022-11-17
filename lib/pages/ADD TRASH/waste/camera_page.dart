@@ -54,26 +54,31 @@ class _CameraPageState extends State<CameraPage> {
       return Scaffold(
         floatingActionButton: Align(
           alignment: Alignment.center + const Alignment(0.1, 0.45),
-          child: Container(
-            width: 70,
-            height: 70,
-            decoration: BoxDecoration(
-              color: const Color(0xff2D8D7B),
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                const Icon(
-                  Icons.camera,
-                  color: Colors.white,
-                ),
-                Text(
-                  'Take',
-                  style: btnTakePhoto,
-                ),
-              ],
+          child: InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/loadedSuccess');
+            },
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                color: const Color(0xff2D8D7B),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const Icon(
+                    Icons.camera,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'Take',
+                    style: btnTakePhoto,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -125,7 +130,6 @@ class _CameraPageState extends State<CameraPage> {
                     minWidth: double.infinity,
                     onPressed: (() {
                       Navigator.pushNamed(context, '/wastePrice');
-                  
                     }),
                     child: Text(
                       'Waste Prices',
