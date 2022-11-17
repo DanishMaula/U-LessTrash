@@ -458,3 +458,22 @@ TextStyle txtSentHistory = GoogleFonts.poppins(
   fontWeight: FontWeight.w600,
   color: const Color(0xff2D8D7B),
 );
+
+TextStyle btnWasteTerm = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xffffffff),
+);
+
+TextStyle btnTakePhoto = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: const Color(0xffffffff),
+);
+
+
+TextStyle txtTermCondition = GoogleFonts.poppins(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff000000),
+);

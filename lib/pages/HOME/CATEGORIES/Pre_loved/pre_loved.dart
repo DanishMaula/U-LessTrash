@@ -25,7 +25,7 @@ class _PreLovedState extends State<PreLoved> {
               IconButton(
                 icon: Image.asset('assets/images/ic_back.png'),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/navBar');
                 },
               ),
               Text(

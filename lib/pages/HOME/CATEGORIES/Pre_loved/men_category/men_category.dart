@@ -36,7 +36,7 @@ class _MenCategoryState extends State<MenCategory> {
                   flex: 1,
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushNamed(context, '/preLoved');
                     },
                     icon: Image.asset(
                       'assets/images/ic_back.png',
