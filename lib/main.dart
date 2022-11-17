@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/camera_page.dart';
-import 'package:u_less_trash/pages/ADD%20TRASH/waste/waste_terms.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/waste/waste%20price/tabbar_waste_price.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/waste/waste%20terms/waste_terms.dart';
 import 'package:u_less_trash/pages/CHAT/chat_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/cart_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/payment_finished.dart';
@@ -51,7 +52,8 @@ class MyApp extends StatelessWidget {
         '/enterBank': (context) => const BankAccount(),
         '/enterPin': (context) => EnterPin(),
         '/myHistory': (context) => const TabbarHistory(),
-        '/wasteTerm' :(context) => const WasteTerms(),
+        '/wasteTerm': (context) => const WasteTerms(),
+        '/wastePrice': (context) => const TabbarWastePrice(),
       },
     );
   }

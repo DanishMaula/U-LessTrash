@@ -123,7 +123,10 @@ class _CameraPageState extends State<CameraPage> {
                     color: const Color(0xff2D8D7B),
                     height: 40,
                     minWidth: double.infinity,
-                    onPressed: (() {}),
+                    onPressed: (() {
+                      Navigator.pushNamed(context, '/wastePrice');
+                  
+                    }),
                     child: Text(
                       'Waste Prices',
                       style: btnWasteTerm,

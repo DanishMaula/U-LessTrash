@@ -3,8 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/items/term_condition.dart';
 
-import '../../../models/terms_condition_model.dart';
-import '../../../utils/text_style.dart';
+import '../../../../models/terms_condition_model.dart';
+import '../../../../utils/text_style.dart';
 
 class WasteTerms extends StatelessWidget {
   const WasteTerms({super.key});
