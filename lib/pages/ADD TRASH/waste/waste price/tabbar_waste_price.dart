@@ -58,7 +58,7 @@ class _TabbarWastePriceState extends State<TabbarWastePrice>
                 border: Border.all(color: const Color(0xffE0E0E0), width: 1),
               ),
               child: TabBar(
-                labelPadding: const EdgeInsets.symmetric(horizontal: 20.0),
+                labelPadding: const EdgeInsets.symmetric(horizontal: 10.0),
                 controller: _tabController,
                 // make underline indicator
                 indicator: const UnderlineTabIndicator(

@@ -49,7 +49,6 @@ class MyApp extends StatelessWidget {
         '/chat': (context) => const ChatPage(),
         '/payment': (context) => const PaymentPage(),
         '/paymentFinish': (context) => const PaymentFinished(),
-        '/cameraPage': (context) => const CameraPage(),
         '/selectRekening': (context) => const SelectRekening(),
         '/enterBank': (context) => const BankAccount(),
         '/enterPin': (context) => EnterPin(),
