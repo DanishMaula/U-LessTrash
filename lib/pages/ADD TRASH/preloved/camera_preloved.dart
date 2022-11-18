@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:u_less_trash/pages/ADD%20TRASH/preloved/photo_confirm.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/preloved/preview_photo.dart';
 
 import '../../../utils/text_style.dart';
 
@@ -39,12 +39,11 @@ class _CameraPrelovedState extends State<CameraPreloved> {
     try {
       await _cameraController.setFlashMode(FlashMode.off);
       XFile picture = await _cameraController.takePicture();
-      // Navigator.push(
-      //     context,
-      //     MaterialPageRoute(
-      //         builder: (context) => PhotoConfirm(
-      //               picture: picture,
-      //             )));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PreviewPhoto(
+            picture: picture,
+
+          )));
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');
       return null;
@@ -94,26 +93,29 @@ class _CameraPrelovedState extends State<CameraPreloved> {
             ]),
             const Spacer(),
             Center(
-              child: Container(
-                width: 70,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: const Color(0xff2D8D7B),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    const Icon(
-                      Icons.camera,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      'Take',
-                      style: btnTakePhoto,
-                    ),
-                  ],
+              child: InkWell(
+                onTap: takePicture,
+                child: Container(
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff2D8D7B),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      const Icon(
+                        Icons.camera,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        'Take',
+                        style: btnTakePhoto,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
