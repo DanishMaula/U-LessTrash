@@ -490,3 +490,9 @@ TextStyle txtDialogWaste = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: const Color(0xffE5E5E5),
 );
+
+TextStyle txtTrashCategoty = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: const Color(0xff263238),
+);
