@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/preloved/add_success.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/camera_page.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/process/loaded_success.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/process/set_address.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/wasteTerm': (context) => const WasteTerms(),
         '/wastePrice': (context) => const TabbarWastePrice(),
         '/loadedSuccess': (context) => const LoadedSuccess(),
+        '/addItemsSuccess': (context) => const AddSuccess(),
       },
     );
   }

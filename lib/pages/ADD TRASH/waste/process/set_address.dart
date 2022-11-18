@@ -166,82 +166,7 @@ class _SetAddressState extends State<SetAddress> {
                     });
                   } else {
                     // animated dialog
-                    showGeneralDialog(
-                      barrierLabel: "Label",
-                      barrierDismissible: true,
-                      barrierColor: Colors.black.withOpacity(0.5),
-                      transitionDuration: Duration(milliseconds: 700),
-                      context: context,
-                      pageBuilder: (context, anim1, anim2) {
-                        return Align(
-                          alignment: Alignment.center,
-                          child: Wrap(
-                            children: [
-                              Container(
-                                  margin: EdgeInsets.only(left: 12, right: 12),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        20, 25, 20, 25),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          AppAsset.eartHeart,
-                                          width: 106,
-                                          height: 91,
-                                        ),
-                                        const SizedBox(height: 5),
-                                        DefaultTextStyle(
-                                            textAlign: TextAlign.center,
-                                            style: txtFinishPayment,
-                                            child: const Text(
-                                                ('Your Waste Was Added \nSuccessfully'))),
-                                        const SizedBox(height: 5),
-                                        DefaultTextStyle(
-                                            textAlign: TextAlign.center,
-                                            style: txtDialogWaste,
-                                            child: const Text(
-                                                ('Wow, you are great, because you have become someone who cares about the health of the earth. Thank you for selling your trash on ReWaste'))),
-                                        const SizedBox(height: 15),
-                                        Wrap(
-                                          children: [
-                                            Container(
-                                              child: MaterialButton(
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5)),
-                                                color: AppColor.colorPrimary,
-                                                onPressed: () {
-                                                  Navigator.pushNamed(
-                                                      context, '/navBar');
-                                                },
-                                                child: Text(
-                                                  'Back to Home',
-                                                  style: setLocation,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        );
-                      },
-                      transitionBuilder: (context, anim1, anim2, child) {
-                        return SlideTransition(
-                          position:
-                              Tween(begin: Offset(0, 1), end: Offset(0, 0))
-                                  .animate(anim1),
-                          child: child,
-                        );
-                      },
-                    );
+                    showDialog(context);
                   }
                 },
                 child: Text(
@@ -273,5 +198,85 @@ class _SetAddressState extends State<SetAddress> {
             ],
           ),
         ));
+  }
+
+  // Show Dialog After Finish add waste
+  Future<Object?> showDialog(BuildContext context) {
+    return showGeneralDialog(
+                    barrierLabel: "Label",
+                    barrierDismissible: true,
+                    barrierColor: Colors.black.withOpacity(0.5),
+                    transitionDuration: const Duration(milliseconds: 700),
+                    context: context,
+                    pageBuilder: (context, anim1, anim2) {
+                      return Align(
+                        alignment: Alignment.center,
+                        child: Wrap(
+                          children: [
+                            Container(
+                                margin: const EdgeInsets.only(left: 12, right: 12),
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      20, 25, 20, 25),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        AppAsset.eartHeart,
+                                        width: 106,
+                                        height: 91,
+                                      ),
+                                      const SizedBox(height: 5),
+                                      DefaultTextStyle(
+                                          textAlign: TextAlign.center,
+                                          style: txtFinishPayment,
+                                          child: const Text(
+                                              ('Your Waste Was Added \nSuccessfully'))),
+                                      const SizedBox(height: 5),
+                                      DefaultTextStyle(
+                                          textAlign: TextAlign.center,
+                                          style: txtDialogWaste,
+                                          child: const Text(
+                                              ('Wow, you are great, because you have become someone who cares about the health of the earth. Thank you for selling your trash on ReWaste'))),
+                                      const SizedBox(height: 15),
+                                      Wrap(
+                                        children: [
+                                          Container(
+                                            child: MaterialButton(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          5)),
+                                              color: AppColor.colorPrimary,
+                                              onPressed: () {
+                                                Navigator.pushNamed(
+                                                    context, '/navBar');
+                                              },
+                                              child: Text(
+                                                'Back to Home',
+                                                style: setLocation,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                )),
+                          ],
+                        ),
+                      );
+                    },
+                    transitionBuilder: (context, anim1, anim2, child) {
+                      return SlideTransition(
+                        position:
+                            Tween(begin: Offset(0, 1), end: Offset(0, 0))
+                                .animate(anim1),
+                        child: child,
+                      );
+                    },
+                  );
   }
 }

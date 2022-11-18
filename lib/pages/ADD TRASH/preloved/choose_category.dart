@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/preloved/add_details.dart';
 import 'package:u_less_trash/utils/colors.dart';
 
 import '../../../utils/text_style.dart';
@@ -12,7 +13,7 @@ class ChooseCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            elevation: 0,
+            elevation: 1,
             automaticallyImplyLeading: false,
             title: Row(
               children: [
@@ -252,29 +253,38 @@ class ChooseCategory extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: const Color(0xffE5E5E5)),
-                            ),
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(10, 15, 10, 15),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Computer Parts & Accessories',
-                                    style: txtTrashCategoty,
-                                  ),
-                                  const Icon(
-                                    Icons.arrow_forward_ios,
-                                    size: 20,
-                                    color: Color(0xff263238),
-                                  )
-                                ],
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const AddDetails(text: '',)));
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                border:
+                                    Border.all(color: const Color(0xffE5E5E5)),
+                              ),
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(10, 15, 10, 15),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Computer Parts & Accessories',
+                                      style: txtTrashCategoty,
+                                    ),
+                                    const Icon(
+                                      Icons.arrow_forward_ios,
+                                      size: 20,
+                                      color: Color(0xff263238),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),

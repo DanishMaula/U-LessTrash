@@ -16,7 +16,7 @@ class MenCategoryDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     // Snack bar
     final SnackBar snackBar = SnackBar(
-      backgroundColor: Colors.black.withOpacity(0.8),
+      backgroundColor: Colors.black.withOpacity(0.7),
       content: SizedBox(
           height: 20,
           child: Row(
@@ -75,11 +75,8 @@ class MenCategoryDetails extends StatelessWidget {
             // Text Seller
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ChatPage(
-                            )));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const ChatPage()));
               },
               child: Container(
                 decoration: BoxDecoration(

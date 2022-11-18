@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:u_less_trash/pages/ADD%20TRASH/preloved/add_details.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/process/set_address.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/cart/checkout_page.dart';
 import 'package:u_less_trash/pages/HOME/CATEGORIES/Pre_loved/filter/filter_page.dart';
@@ -42,21 +43,26 @@ class MapSampleState extends State<MapSample> {
     getDataFromDifScreen() {
       if (widget.text == 'checkout') {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return CheckoutPage(
+          return const CheckoutPage(
             text: 'checkout',
           );
         }));
       } else if (widget.text == 'setAddress') {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return SetAddress(text: 'setAddress');
+          return const SetAddress(text: 'setAddress');
         }));
-      } else {
+      } else if (widget.text == 'addDetails') {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return FilterPage(text: 'miqdad');
+          return const AddDetails(text: 'addDetails');
         }));
+      }else{
+         Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const FilterPage(text: 'miqdad');
+    }));
       }
     }
 
+   
     // send data to filter page
     // void sendData(context) {
     //   String textToSend = 'miqdad';
@@ -85,7 +91,7 @@ class MapSampleState extends State<MapSample> {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 5,
                 blurRadius: 7,
-                offset: Offset(0, 3), // changes position of shadow
+                offset: const Offset(0, 3), // changes position of shadow
               ),
             ],
           ),

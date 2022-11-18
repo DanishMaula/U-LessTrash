@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/preloved/camera_preloved.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/waste/camera_page.dart';
+import 'package:u_less_trash/widget/custom_transition.dart';
 
 import '../../utils/text_style.dart';
 
@@ -29,10 +30,10 @@ class AddTrash extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () async {
-                  await availableCameras().then((value) => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => CameraPage(cameras: value))));
+                  await availableCameras().then((value) =>
+                      // animate from right to left
+                      Navigator.push(context,
+                          CustomTransition(child: CameraPage(cameras: value))));
                 },
                 child: Container(
                   width: double.infinity,
@@ -50,10 +51,8 @@ class AddTrash extends StatelessWidget {
             const SizedBox(height: 10),
             InkWell(
               onTap: () async {
-                await availableCameras().then((value) => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) => CameraPreloved(cameras: value))));
+                await availableCameras().then((value) => Navigator.push(context,
+                    CustomTransition(child: CameraPreloved(cameras: value))));
               },
               child: Container(
                 width: double.infinity,

@@ -56,6 +56,7 @@ class _FilterPageState extends State<FilterPage> {
     if (widget.text == 'miqdad') {
       setState(() {
         locationUnSelected = locationSelected;
+        
       });
     } else {
       setState(() {

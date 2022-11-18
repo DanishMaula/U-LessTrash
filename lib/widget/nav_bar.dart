@@ -5,6 +5,7 @@ import 'package:u_less_trash/pages/CHAT/chat_page_list.dart';
 import 'package:u_less_trash/pages/HOME/home_page.dart';
 import 'package:u_less_trash/pages/MY_STOCK/my_stock.dart';
 import 'package:u_less_trash/pages/PROFILE/profile_page.dart';
+import 'package:u_less_trash/utils/colors.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({
@@ -45,8 +46,7 @@ class _NavBarState extends State<NavBar> {
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
         bottomNavigationBar: Theme(
-          data:
-              Theme.of(context).copyWith(canvasColor: const Color(0xff2D8D7B)),
+          data: Theme.of(context).copyWith(canvasColor: AppColor.colorPrimary),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             currentIndex: _selectedIndex,

@@ -39,11 +39,13 @@ class _CameraPrelovedState extends State<CameraPreloved> {
     try {
       await _cameraController.setFlashMode(FlashMode.off);
       XFile picture = await _cameraController.takePicture();
+      // ignore: use_build_context_synchronously
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PreviewPhoto(
-            picture: picture,
-
-          )));
+          context,
+          MaterialPageRoute(
+              builder: (context) => PreviewPhoto(
+                    picture: picture,
+                  )));
     } on CameraException catch (e) {
       debugPrint('Error occured while taking picture: $e');
       return null;

@@ -189,7 +189,7 @@ TextStyle hargaDetail = GoogleFonts.poppins(
 
 TextStyle penggunaDetail = GoogleFonts.poppins(
   fontSize: 14,
-  fontWeight: FontWeight.w700,
+  fontWeight: FontWeight.w500,
   color: const Color(0xff333333),
 );
 
