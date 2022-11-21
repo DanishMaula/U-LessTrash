@@ -14,6 +14,17 @@ class PreviewPhoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void sendData() {
+      // send photo to category screen
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ChooseCategory(
+                  picture: picture,
+                )),
+      );
+    }
+
     return Scaffold(
       backgroundColor: const Color(0xff333333),
       body: Column(children: [
@@ -48,8 +59,7 @@ class PreviewPhoto extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const ChooseCategory())),
+              onTap: () => sendData(),
               child: Container(
                 height: 70,
                 width: 70,

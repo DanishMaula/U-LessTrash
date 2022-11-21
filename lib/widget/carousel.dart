@@ -22,25 +22,28 @@ class _CarouselWidgetState extends State<CarouselWidget> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Column(
+    return Column(
       children: [
-        CarouselSlider.builder(
-            itemCount: image.length,
-            itemBuilder: (context, index, realIndex) {
-              final imageA = image[index];
-              return buildImage(imageA, index);
-            },
-            options: CarouselOptions(
-                height: 250,
-                autoPlay: true,
-                viewportFraction: 1,
-                onPageChanged: ((index, reason) =>
-                    setState((() => pageIndex = index))))),
+        Container(
+          width: double.infinity,
+          height: 240,
+          child: CarouselSlider.builder(
+              itemCount: image.length,
+              itemBuilder: (context, index, realIndex) {
+                final imageA = image[index];
+                return buildImage(imageA, index);
+              },
+              options: CarouselOptions(
+                  autoPlay: true,
+                  autoPlayAnimationDuration: const Duration(milliseconds: 500),
+                  viewportFraction: 1,
+                  onPageChanged: ((index, reason) =>
+                      setState((() => pageIndex = index))))),
+        ),
         const SizedBox(height: 5),
         buildIndicator()
       ],
-    ));
+    );
   }
 
   Widget buildImage(Widget image, int index) {

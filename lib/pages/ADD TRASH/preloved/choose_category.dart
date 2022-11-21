@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -7,7 +8,9 @@ import 'package:u_less_trash/utils/colors.dart';
 import '../../../utils/text_style.dart';
 
 class ChooseCategory extends StatelessWidget {
-  const ChooseCategory({super.key});
+  final XFile picture;
+
+  const ChooseCategory({super.key, required this.picture});
 
   @override
   Widget build(BuildContext context) {
@@ -258,8 +261,9 @@ class ChooseCategory extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          const AddDetails(text: '',)));
+                                      builder: (context) => const AddDetails(
+                                            text: '',
+                                          )));
                             },
                             child: Container(
                               decoration: BoxDecoration(

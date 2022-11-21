@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -53,16 +54,17 @@ class MapSampleState extends State<MapSample> {
         }));
       } else if (widget.text == 'addDetails') {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const AddDetails(text: 'addDetails');
+          return AddDetails(
+            text: 'addDetails',
+          );
         }));
-      }else{
-         Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const FilterPage(text: 'miqdad');
-    }));
+      } else {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return const FilterPage(text: 'miqdad');
+        }));
       }
     }
 
-   
     // send data to filter page
     // void sendData(context) {
     //   String textToSend = 'miqdad';
@@ -79,101 +81,119 @@ class MapSampleState extends State<MapSample> {
     return SafeArea(
       child: Scaffold(
         // Bottom Navigation Bar
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(35),
-              topRight: Radius.circular(35),
-            ),
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: const Offset(0, 3), // changes position of shadow
+        bottomNavigationBar: Wrap(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(35),
+                  topRight: Radius.circular(35),
+                ),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
-            ],
-          ),
-          height: MediaQuery.of(context).size.height / 2.5,
-          child: Padding(
-            padding:
-                const EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                Text(
-                  // 'Select a Pick Up Adress',
-                  'Select a Pick Up Address',
-                  style: selectAdd,
-                ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 15, bottom: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Image.asset(
+                        'assets/images/line.png',
+                        width: 40,
+                        height: 5,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      // 'Select a Pick Up Adress',
+                      'Select a Pick Up Address',
+                      style: selectAdd,
+                    ),
 
-                const SizedBox(height: 5),
-                // make text with different colour
-                Text.rich(
-                  TextSpan(
-                    text:
-                        'ReWaste\'s current operational locations are available in the regions:',
-                    style: textSpan1,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
+                    const SizedBox(height: 5),
+                    // make text with different colour
+                    Text.rich(
                       TextSpan(
-                          text:
-                              ' Tangerang City, Tangerang Regency, South Tangerang City, Bekasi, Bekasi City, South Jakarta, Central Jakarta, North Jakarta, East Jakarta, West Jakarta, Depok',
-                          style: textSpan2),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: const Color(0xffE5E5E5)),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
+                        text:
+                            'ReWaste\'s current operational locations are available in the regions:',
+                        style: textSpan1,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
-                          Image.asset(
-                            'assets/images/ic_location.png',
-                            width: 16,
-                            height: 20,
-                          ),
-                          const SizedBox(width: 10),
-                          Text(
-                            locationUnClicked,
-                            style: locationUnClicked == 'Set Location'
-                                ? hintStyle
-                                : currentLocationClicked,
-                          ),
+                          TextSpan(
+                              text:
+                                  ' Tangerang City, Tangerang Regency, South Tangerang City, Bekasi, Bekasi City, South Jakarta, Central Jakarta, North Jakarta, East Jakarta, West Jakarta, Depok',
+                              style: textSpan2),
                         ],
                       ),
                     ),
-                  ),
+                    const SizedBox(height: 10),
+                    Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: const Color(0xffE5E5E5)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/ic_location.png',
+                                width: 16,
+                                height: 20,
+                              ),
+                              const SizedBox(width: 10),
+                              Text(
+                                locationUnClicked,
+                                style: locationUnClicked == 'Set Location'
+                                    ? hintStyle
+                                    : currentLocationClicked,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    // set location button
+                    MaterialButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      minWidth: MediaQuery.of(context).size.width,
+                      height: 40,
+                      color: const Color(0xff2D8D7B),
+                      onPressed: () {
+                        if (locationUnClicked == 'Set Location') {
+                          print('set location first');
+                        } else {
+                          getDataFromDifScreen();
+                        }
+                      },
+                      child: Text(
+                        'Set Location',
+                        style: setLocation,
+                      ),
+                    )
+                  ],
                 ),
-                const SizedBox(width: 10),
-                // set location button
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  minWidth: MediaQuery.of(context).size.width,
-                  height: 40,
-                  color: const Color(0xff2D8D7B),
-                  onPressed: () {
-                    getDataFromDifScreen();
-                  },
-                  child: Text(
-                    'Set Location',
-                    style: setLocation,
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
+          ],
         ),
         body: Stack(
           children: [

@@ -19,44 +19,25 @@ class FilterPage extends StatefulWidget {
 }
 
 class _FilterPageState extends State<FilterPage> {
-  int bgColourTab = 0xff2D8D7B;
-
   var locationUnSelected = 'Select Location';
   var locationSelected =
       'Perumahan Nusa Loka Blok B2 No 2, \nJombang, Ciputat, Tangsel';
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _loadData();
+  // void setPreference() async {
+  //   final setPref = await SharedPreferences.getInstance();
+
+  //   setPref.setBool('isClicked', isClicked);
   // }
 
-  // setPreference() async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-
-  //   prefs.setInt('color', bgColourTab);
-
-  //   setState(() {
-  //     bgColourTab = prefs.getInt('color') ?? 0xff2D8D7B;
-
-  //   });
-  // }
-
-  // _getData() async {
-  //   setPreference();
-
-  // }
-
-  // _loadData() async {
-  //   setPreference();
-
+  // void getPreference() async {
+  //   final getPref = await SharedPreferences.getInstance();
+    
   // }
 
   void getData() async {
     if (widget.text == 'miqdad') {
       setState(() {
         locationUnSelected = locationSelected;
-        
       });
     } else {
       setState(() {
@@ -178,6 +159,7 @@ class _FilterPageState extends State<FilterPage> {
                   InkWell(
                     onTap: () {
                       setState(() {
+                        // getPreference();
                         isClicked = !isClicked;
                       });
                     },
@@ -471,7 +453,9 @@ class _FilterPageState extends State<FilterPage> {
                       if (isClicked && isClicked2 == true) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return const MapSample(text: '',);
+                          return const MapSample(
+                            text: '',
+                          );
                         }));
                       }
                     },

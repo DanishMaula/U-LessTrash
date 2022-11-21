@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -8,7 +9,10 @@ import '../../HOME/CATEGORIES/Pre_loved/filter/location.dart';
 class AddDetails extends StatefulWidget {
   final String text;
 
-  const AddDetails({super.key, required this.text});
+  const AddDetails({
+    super.key,
+    required this.text,
+  });
 
   @override
   State<AddDetails> createState() => _AddDetailsState();
@@ -87,10 +91,15 @@ class _AddDetailsState extends State<AddDetails> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // Image.file(File)
               Container(
                 height: 360,
-                width: double.infinity,
-                color: Colors.blue,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/hasilp.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
               Padding(
