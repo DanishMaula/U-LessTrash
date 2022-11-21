@@ -23,16 +23,19 @@ class _FilterPageState extends State<FilterPage> {
   var locationSelected =
       'Perumahan Nusa Loka Blok B2 No 2, \nJombang, Ciputat, Tangsel';
 
-  // void setPreference() async {
-  //   final setPref = await SharedPreferences.getInstance();
+  void setPreference() async {
+    SharedPreferences setPref = await SharedPreferences.getInstance();
+    setPref.setBool('isClicked', isClicked);
+    setPref.setBool('isClicked2', isClicked2);
+  }
 
-  //   setPref.setBool('isClicked', isClicked);
-  // }
-
-  // void getPreference() async {
-  //   final getPref = await SharedPreferences.getInstance();
-    
-  // }
+  void getPreference() async {
+    SharedPreferences getPref = await SharedPreferences.getInstance();
+    setState(() {
+      isClicked = getPref.getBool('isClicked') ?? false;
+      isClicked2 = getPref.getBool('isClicked2') ?? false;
+    });
+  }
 
   void getData() async {
     if (widget.text == 'miqdad') {
@@ -50,6 +53,7 @@ class _FilterPageState extends State<FilterPage> {
   void initState() {
     super.initState();
     getData();
+    getPreference();
   }
 
   var isClicked = false;
@@ -161,6 +165,7 @@ class _FilterPageState extends State<FilterPage> {
                       setState(() {
                         // getPreference();
                         isClicked = !isClicked;
+                        setPreference();
                       });
                     },
                     child: Container(
@@ -306,6 +311,7 @@ class _FilterPageState extends State<FilterPage> {
                         onTap: () {
                           setState(() {
                             isClicked2 = !isClicked2;
+                            setPreference();
                           });
                         },
                         child: Container(

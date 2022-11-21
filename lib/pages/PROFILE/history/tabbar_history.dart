@@ -53,8 +53,10 @@ class _TabbarHistoryState extends State<TabbarHistory>
           // give the tab bar a height [can change height to preferred height]
           Container(
             height: 45,
-            decoration: BoxDecoration(
-              border: Border.all(color: const Color(0xffE0E0E0), width: 1),
+            decoration: const BoxDecoration(
+              border: Border.fromBorderSide(
+                BorderSide(color: Color(0xffE5E5E5)),
+              ),
             ),
             child: TabBar(
               controller: _tabController,
