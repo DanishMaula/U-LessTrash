@@ -62,6 +62,7 @@ class _MenCategoryItemState extends State<MenCategoryItem> {
                           },
                           child: Icon(
                             Icons.favorite,
+                            size: 15,
                             color: isActive == true
                                 ? Colors.red
                                 : const Color(0xffBDBDBD),

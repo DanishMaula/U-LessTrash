@@ -163,7 +163,6 @@ class _FilterPageState extends State<FilterPage> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        // getPreference();
                         isClicked = !isClicked;
                         setPreference();
                       });

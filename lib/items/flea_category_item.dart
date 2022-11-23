@@ -62,6 +62,7 @@ class _FleaCategoryItemState extends State<FleaCategoryItem> {
                           },
                           child: Icon(
                             Icons.favorite,
+                            size: 15,
                             color: isActive == true
                                 ? Colors.red
                                 : const Color(0xffBDBDBD),

@@ -6,7 +6,6 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:u_less_trash/pages/ADD%20TRASH/preloved/choose_category.dart';
 
-import '../../../utils/text_style.dart';
 
 class PreviewPhoto extends StatelessWidget {
   final XFile picture;

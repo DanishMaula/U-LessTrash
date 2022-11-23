@@ -44,14 +44,7 @@ class _CartItemState extends State<CartItem> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ]),
+                      border: Border.all(color: const Color(0xffE5E5E5))),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
